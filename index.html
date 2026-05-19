@@ -300,7 +300,7 @@
                     gridcolor: '#f1f5f9'
                 },
                 yaxis: { 
-                    title: 'Nivel de Ruido (dB)',
+                    title: 'Nivel de Ruido, dBA',
                     gridcolor: '#e2e8f0',
                     zeroline: false,
                     range: [40, 80]
@@ -377,24 +377,24 @@
 
             // Franjas de fondo: Nocturno / Diurno / Vespertino
             const shapes = [
-                // Madrugada 00–06
-                { type: 'rect', x0: '00:00', x1: '06:00', y0: 0, y1: 1, yref: 'paper',
+                // Noche 00–07
+                { type: 'rect', x0: '00:00', x1: '07:00', y0: 0, y1: 1, yref: 'paper',
                   fillcolor: 'rgba(30,58,138,0.04)', line: { width: 0 } },
                 // Mañana-tarde 06–20
-                { type: 'rect', x0: '06:00', x1: '20:00', y0: 0, y1: 1, yref: 'paper',
+                { type: 'rect', x0: '07:00', x1: '21:00', y0: 0, y1: 1, yref: 'paper',
                   fillcolor: 'rgba(251,191,36,0.05)', line: { width: 0 } },
-                // Noche 20–23
-                { type: 'rect', x0: '20:00', x1: '23:00', y0: 0, y1: 1, yref: 'paper',
+                // Noche 22–23
+                { type: 'rect', x0: '22:00', x1: '23:00', y0: 0, y1: 1, yref: 'paper',
                   fillcolor: 'rgba(30,58,138,0.04)', line: { width: 0 } },
             ];
 
             // Anotaciones de franja horaria
             const annotations = [
-                { x: '03:00', y: 1, yref: 'paper', text: '🌙 Nocturno', showarrow: false,
+                { x: '03:00', y: 1, yref: 'paper', text: '🌙 Noche', showarrow: false,
                   font: { size: 10, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' },
                 { x: '13:00', y: 1, yref: 'paper', text: '☀️ Diurno', showarrow: false,
                   font: { size: 10, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' },
-                { x: '21:30', y: 1, yref: 'paper', text: '🌇 Vespertino', showarrow: false,
+                { x: '22:00', y: 1, yref: 'paper', text: '🌙 Noche', showarrow: false,
                   font: { size: 10, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' },
             ];
 
@@ -415,14 +415,14 @@
                     title: { text: 'Hora del día', standoff: 10 },
                     categoryorder: 'array',
                     categoryarray: ALL_HOURS,
-                    tickangle: -60,
+                    tickangle: -90,
                     tickfont: { size: 10 },
                     gridcolor: '#f1f5f9',
                     showline: true,
                     linecolor: '#e2e8f0'
                 },
                 yaxis: {
-                    title: { text: 'Nivel de Ruido (dB)', standoff: 10 },
+                    title: { text: 'Nivel de Ruido, dBA', standoff: 10 },
                     gridcolor: '#e2e8f0',
                     zeroline: false,
                     range: [minY, maxY],
