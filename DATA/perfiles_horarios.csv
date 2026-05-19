@@ -1,0 +1,1540 @@
+Estacion,Anio,Hora,Ruido_dB
+Alameda,2023,00:00,69
+Alameda,2023,01:00,67.8
+Alameda,2023,02:00,66.9
+Alameda,2023,03:00,66.1
+Alameda,2023,04:00,66.2
+Alameda,2023,05:00,67.6
+Alameda,2023,06:00,69.3
+Alameda,2023,07:00,70.3
+Alameda,2023,08:00,70.8
+Alameda,2023,09:00,70.4
+Alameda,2023,10:00,70.6
+Alameda,2023,11:00,70.7
+Alameda,2023,12:00,71.7
+Alameda,2023,13:00,71.6
+Alameda,2023,14:00,71.8
+Alameda,2023,15:00,71.3
+Alameda,2023,16:00,71.6
+Alameda,2023,17:00,71
+Alameda,2023,18:00,71.1
+Alameda,2023,19:00,71.3
+Alameda,2023,20:00,71.6
+Alameda,2023,21:00,70.6
+Alameda,2023,22:00,70.4
+Alameda,2023,23:00,70.1
+Alameda,2024,00:00,68.7
+Alameda,2024,01:00,67.4
+Alameda,2024,02:00,66.1
+Alameda,2024,03:00,65.6
+Alameda,2024,04:00,66.1
+Alameda,2024,05:00,67.3
+Alameda,2024,06:00,69.3
+Alameda,2024,07:00,70.2
+Alameda,2024,08:00,70.8
+Alameda,2024,09:00,70.7
+Alameda,2024,10:00,70.9
+Alameda,2024,11:00,71.3
+Alameda,2024,12:00,71.5
+Alameda,2024,13:00,71.2
+Alameda,2024,14:00,70.9
+Alameda,2024,15:00,70.8
+Alameda,2024,16:00,70.8
+Alameda,2024,17:00,71.3
+Alameda,2024,18:00,70.8
+Alameda,2024,19:00,70.8
+Alameda,2024,20:00,70.9
+Alameda,2024,21:00,70.6
+Alameda,2024,22:00,70.5
+Alameda,2024,23:00,69.6
+Alameda,2025,00:00,68.3
+Alameda,2025,01:00,66.9
+Alameda,2025,02:00,65.6
+Alameda,2025,03:00,65.1
+Alameda,2025,04:00,65.5
+Alameda,2025,05:00,66.6
+Alameda,2025,06:00,68.6
+Alameda,2025,07:00,70.1
+Alameda,2025,08:00,70.5
+Alameda,2025,09:00,70.5
+Alameda,2025,10:00,70.9
+Alameda,2025,11:00,71.3
+Alameda,2025,12:00,71.3
+Alameda,2025,13:00,70.7
+Alameda,2025,14:00,71.5
+Alameda,2025,15:00,70.8
+Alameda,2025,16:00,71
+Alameda,2025,17:00,71
+Alameda,2025,18:00,70.7
+Alameda,2025,19:00,70.9
+Alameda,2025,20:00,71
+Alameda,2025,21:00,71
+Alameda,2025,22:00,70.3
+Alameda,2025,23:00,70.7
+Alameda Reemplazo,2024,00:00,58.3
+Alameda Reemplazo,2024,01:00,56.4
+Alameda Reemplazo,2024,02:00,57.2
+Alameda Reemplazo,2024,03:00,53
+Alameda Reemplazo,2024,04:00,53.6
+Alameda Reemplazo,2024,05:00,56.6
+Alameda Reemplazo,2024,06:00,60.2
+Alameda Reemplazo,2024,07:00,62.3
+Alameda Reemplazo,2024,08:00,64
+Alameda Reemplazo,2024,09:00,63.8
+Alameda Reemplazo,2024,10:00,63.6
+Alameda Reemplazo,2024,11:00,75.8
+Alameda Reemplazo,2024,12:00,62.4
+Alameda Reemplazo,2024,13:00,65.1
+Alameda Reemplazo,2024,14:00,62.3
+Alameda Reemplazo,2024,15:00,65.8
+Alameda Reemplazo,2024,16:00,70.6
+Alameda Reemplazo,2024,17:00,76
+Alameda Reemplazo,2024,18:00,63.6
+Alameda Reemplazo,2024,19:00,66.1
+Alameda Reemplazo,2024,20:00,63.1
+Alameda Reemplazo,2024,21:00,61.6
+Alameda Reemplazo,2024,22:00,64.8
+Alameda Reemplazo,2024,23:00,61.1
+Alvarez Viña del Mar,2023,00:00,67.5
+Alvarez Viña del Mar,2023,01:00,66.6
+Alvarez Viña del Mar,2023,02:00,65.1
+Alvarez Viña del Mar,2023,03:00,64.2
+Alvarez Viña del Mar,2023,04:00,64.1
+Alvarez Viña del Mar,2023,05:00,64.9
+Alvarez Viña del Mar,2023,06:00,67.5
+Alvarez Viña del Mar,2023,07:00,68.7
+Alvarez Viña del Mar,2023,08:00,68.8
+Alvarez Viña del Mar,2023,09:00,69.4
+Alvarez Viña del Mar,2023,10:00,69.5
+Alvarez Viña del Mar,2023,11:00,69.2
+Alvarez Viña del Mar,2023,12:00,69.3
+Alvarez Viña del Mar,2023,13:00,69.4
+Alvarez Viña del Mar,2023,14:00,69.5
+Alvarez Viña del Mar,2023,15:00,69.4
+Alvarez Viña del Mar,2023,16:00,69.3
+Alvarez Viña del Mar,2023,17:00,69
+Alvarez Viña del Mar,2023,18:00,69.2
+Alvarez Viña del Mar,2023,19:00,69.4
+Alvarez Viña del Mar,2023,20:00,69.4
+Alvarez Viña del Mar,2023,21:00,69.4
+Alvarez Viña del Mar,2023,22:00,69.2
+Alvarez Viña del Mar,2023,23:00,68.3
+Alvarez Viña del Mar,2024,00:00,67
+Alvarez Viña del Mar,2024,01:00,65.7
+Alvarez Viña del Mar,2024,02:00,64.6
+Alvarez Viña del Mar,2024,03:00,63.8
+Alvarez Viña del Mar,2024,04:00,63.3
+Alvarez Viña del Mar,2024,05:00,64.6
+Alvarez Viña del Mar,2024,06:00,67.8
+Alvarez Viña del Mar,2024,07:00,69.5
+Alvarez Viña del Mar,2024,08:00,69.8
+Alvarez Viña del Mar,2024,09:00,69.9
+Alvarez Viña del Mar,2024,10:00,69.7
+Alvarez Viña del Mar,2024,11:00,69.6
+Alvarez Viña del Mar,2024,12:00,69.6
+Alvarez Viña del Mar,2024,13:00,69.5
+Alvarez Viña del Mar,2024,14:00,69.7
+Alvarez Viña del Mar,2024,15:00,69.8
+Alvarez Viña del Mar,2024,16:00,69.7
+Alvarez Viña del Mar,2024,17:00,69.8
+Alvarez Viña del Mar,2024,18:00,69.8
+Alvarez Viña del Mar,2024,19:00,69.8
+Alvarez Viña del Mar,2024,20:00,69.9
+Alvarez Viña del Mar,2024,21:00,69.7
+Alvarez Viña del Mar,2024,22:00,69.8
+Alvarez Viña del Mar,2024,23:00,68.6
+Alvarez Viña del Mar,2025,00:00,67.6
+Alvarez Viña del Mar,2025,01:00,66.4
+Alvarez Viña del Mar,2025,02:00,65.4
+Alvarez Viña del Mar,2025,03:00,64.2
+Alvarez Viña del Mar,2025,04:00,63.6
+Alvarez Viña del Mar,2025,05:00,64.3
+Alvarez Viña del Mar,2025,06:00,67.3
+Alvarez Viña del Mar,2025,07:00,69.2
+Alvarez Viña del Mar,2025,08:00,69.1
+Alvarez Viña del Mar,2025,09:00,69.4
+Alvarez Viña del Mar,2025,10:00,69.3
+Alvarez Viña del Mar,2025,11:00,69.2
+Alvarez Viña del Mar,2025,12:00,69.1
+Alvarez Viña del Mar,2025,13:00,69.2
+Alvarez Viña del Mar,2025,14:00,69.3
+Alvarez Viña del Mar,2025,15:00,69.5
+Alvarez Viña del Mar,2025,16:00,69.4
+Alvarez Viña del Mar,2025,17:00,69.4
+Alvarez Viña del Mar,2025,18:00,69.3
+Alvarez Viña del Mar,2025,19:00,69.5
+Alvarez Viña del Mar,2025,20:00,69.9
+Alvarez Viña del Mar,2025,21:00,70.3
+Alvarez Viña del Mar,2025,22:00,70
+Alvarez Viña del Mar,2025,23:00,69.1
+Autopista Central,2023,00:00,73
+Autopista Central,2023,01:00,71.5
+Autopista Central,2023,02:00,70.3
+Autopista Central,2023,03:00,69.4
+Autopista Central,2023,04:00,69.4
+Autopista Central,2023,05:00,70.7
+Autopista Central,2023,06:00,73.9
+Autopista Central,2023,07:00,74.7
+Autopista Central,2023,08:00,74.6
+Autopista Central,2023,09:00,74.5
+Autopista Central,2023,10:00,74.6
+Autopista Central,2023,11:00,74.8
+Autopista Central,2023,12:00,75.3
+Autopista Central,2023,13:00,74.9
+Autopista Central,2023,14:00,74.9
+Autopista Central,2023,15:00,75
+Autopista Central,2023,16:00,75.1
+Autopista Central,2023,17:00,75.1
+Autopista Central,2023,18:00,75.2
+Autopista Central,2023,19:00,75.4
+Autopista Central,2023,20:00,75.6
+Autopista Central,2023,21:00,75.7
+Autopista Central,2023,22:00,75
+Autopista Central,2023,23:00,74.1
+Autopista Central,2024,00:00,72.9
+Autopista Central,2024,01:00,71.4
+Autopista Central,2024,02:00,70
+Autopista Central,2024,03:00,69.1
+Autopista Central,2024,04:00,69
+Autopista Central,2024,05:00,70.7
+Autopista Central,2024,06:00,74.1
+Autopista Central,2024,07:00,74.9
+Autopista Central,2024,08:00,74.7
+Autopista Central,2024,09:00,74.6
+Autopista Central,2024,10:00,74.7
+Autopista Central,2024,11:00,74.7
+Autopista Central,2024,12:00,74.7
+Autopista Central,2024,13:00,74.7
+Autopista Central,2024,14:00,74.8
+Autopista Central,2024,15:00,74.9
+Autopista Central,2024,16:00,75
+Autopista Central,2024,17:00,75.1
+Autopista Central,2024,18:00,75.2
+Autopista Central,2024,19:00,75.5
+Autopista Central,2024,20:00,75.7
+Autopista Central,2024,21:00,75.5
+Autopista Central,2024,22:00,75.1
+Autopista Central,2024,23:00,74.1
+Autopista Central,2025,00:00,72.9
+Autopista Central,2025,01:00,71.5
+Autopista Central,2025,02:00,69.8
+Autopista Central,2025,03:00,68.8
+Autopista Central,2025,04:00,69.1
+Autopista Central,2025,05:00,70.8
+Autopista Central,2025,06:00,74
+Autopista Central,2025,07:00,74.6
+Autopista Central,2025,08:00,74.6
+Autopista Central,2025,09:00,74.3
+Autopista Central,2025,10:00,74.4
+Autopista Central,2025,11:00,74.4
+Autopista Central,2025,12:00,74.5
+Autopista Central,2025,13:00,74.3
+Autopista Central,2025,14:00,74.5
+Autopista Central,2025,15:00,74.6
+Autopista Central,2025,16:00,74.6
+Autopista Central,2025,17:00,74.9
+Autopista Central,2025,18:00,75
+Autopista Central,2025,19:00,75.2
+Autopista Central,2025,20:00,75.6
+Autopista Central,2025,21:00,75.5
+Autopista Central,2025,22:00,74.9
+Autopista Central,2025,23:00,74
+Autopista Central Reemplazo,2024,09:00,86.4
+Autopista Central Reemplazo,2024,10:00,24
+Autopista Central Reemplazo,2024,15:00,80
+Autopista Central Reemplazo,2025,00:00,67.7
+Autopista Central Reemplazo,2025,01:00,66.4
+Autopista Central Reemplazo,2025,02:00,64.7
+Autopista Central Reemplazo,2025,03:00,64
+Autopista Central Reemplazo,2025,04:00,63.7
+Autopista Central Reemplazo,2025,05:00,64.9
+Autopista Central Reemplazo,2025,06:00,68
+Autopista Central Reemplazo,2025,07:00,69.6
+Autopista Central Reemplazo,2025,08:00,69.9
+Autopista Central Reemplazo,2025,09:00,70
+Autopista Central Reemplazo,2025,10:00,69.7
+Autopista Central Reemplazo,2025,11:00,69.9
+Autopista Central Reemplazo,2025,12:00,69.8
+Autopista Central Reemplazo,2025,13:00,69.8
+Autopista Central Reemplazo,2025,14:00,70
+Autopista Central Reemplazo,2025,15:00,70.1
+Autopista Central Reemplazo,2025,16:00,69.8
+Autopista Central Reemplazo,2025,17:00,69.7
+Autopista Central Reemplazo,2025,18:00,69.7
+Autopista Central Reemplazo,2025,19:00,70
+Autopista Central Reemplazo,2025,20:00,70.2
+Autopista Central Reemplazo,2025,21:00,70.2
+Autopista Central Reemplazo,2025,22:00,70.1
+Autopista Central Reemplazo,2025,23:00,69.3
+CIAM Concepción,2023,00:00,60.3
+CIAM Concepción,2023,01:00,60.3
+CIAM Concepción,2023,02:00,60
+CIAM Concepción,2023,03:00,56
+CIAM Concepción,2023,04:00,55.8
+CIAM Concepción,2023,05:00,60.2
+CIAM Concepción,2023,06:00,60
+CIAM Concepción,2023,07:00,66
+CIAM Concepción,2023,08:00,65.3
+CIAM Concepción,2023,09:00,65.7
+CIAM Concepción,2023,10:00,66.4
+CIAM Concepción,2023,11:00,67.3
+CIAM Concepción,2023,12:00,64.9
+CIAM Concepción,2023,13:00,65
+CIAM Concepción,2023,14:00,67.6
+CIAM Concepción,2023,15:00,65.8
+CIAM Concepción,2023,16:00,65
+CIAM Concepción,2023,17:00,65
+CIAM Concepción,2023,18:00,67.3
+CIAM Concepción,2023,19:00,65.7
+CIAM Concepción,2023,20:00,65.9
+CIAM Concepción,2023,21:00,67.2
+CIAM Concepción,2023,22:00,66.6
+CIAM Concepción,2023,23:00,63.6
+CIAM Concepción,2024,00:00,61.7
+CIAM Concepción,2024,01:00,56.9
+CIAM Concepción,2024,02:00,54.1
+CIAM Concepción,2024,03:00,53
+CIAM Concepción,2024,04:00,52.1
+CIAM Concepción,2024,05:00,61.9
+CIAM Concepción,2024,06:00,61
+CIAM Concepción,2024,07:00,66.9
+CIAM Concepción,2024,08:00,67.2
+CIAM Concepción,2024,09:00,67.3
+CIAM Concepción,2024,10:00,67.4
+CIAM Concepción,2024,11:00,64.6
+CIAM Concepción,2024,12:00,65.1
+CIAM Concepción,2024,13:00,65.1
+CIAM Concepción,2024,14:00,66.1
+CIAM Concepción,2024,15:00,64.2
+CIAM Concepción,2024,16:00,64.6
+CIAM Concepción,2024,17:00,64
+CIAM Concepción,2024,18:00,66.6
+CIAM Concepción,2024,19:00,65.2
+CIAM Concepción,2024,20:00,64.9
+CIAM Concepción,2024,21:00,67.4
+CIAM Concepción,2024,22:00,64.1
+CIAM Concepción,2024,23:00,63.8
+CIAM Concepción,2025,00:00,64.5
+CIAM Concepción,2025,01:00,61.5
+CIAM Concepción,2025,02:00,58.7
+CIAM Concepción,2025,03:00,57.8
+CIAM Concepción,2025,04:00,57.6
+CIAM Concepción,2025,05:00,62.8
+CIAM Concepción,2025,06:00,62.9
+CIAM Concepción,2025,07:00,66.5
+CIAM Concepción,2025,08:00,67.2
+CIAM Concepción,2025,09:00,67.3
+CIAM Concepción,2025,10:00,68.1
+CIAM Concepción,2025,11:00,64.2
+CIAM Concepción,2025,12:00,65.2
+CIAM Concepción,2025,13:00,65.3
+CIAM Concepción,2025,14:00,66.5
+CIAM Concepción,2025,15:00,64.7
+CIAM Concepción,2025,16:00,65.3
+CIAM Concepción,2025,17:00,65.5
+CIAM Concepción,2025,18:00,68.1
+CIAM Concepción,2025,19:00,66.9
+CIAM Concepción,2025,20:00,67.4
+CIAM Concepción,2025,21:00,67
+CIAM Concepción,2025,22:00,65.2
+CIAM Concepción,2025,23:00,66.5
+Cerro Navia,2023,00:00,52.1
+Cerro Navia,2023,01:00,48.3
+Cerro Navia,2023,02:00,47.9
+Cerro Navia,2023,03:00,51.7
+Cerro Navia,2023,04:00,49
+Cerro Navia,2023,05:00,51.7
+Cerro Navia,2023,06:00,53.5
+Cerro Navia,2023,07:00,55.1
+Cerro Navia,2023,08:00,56.2
+Cerro Navia,2023,09:00,59.2
+Cerro Navia,2023,10:00,58.7
+Cerro Navia,2023,11:00,57.7
+Cerro Navia,2023,12:00,56.7
+Cerro Navia,2023,13:00,58.1
+Cerro Navia,2023,14:00,56.4
+Cerro Navia,2023,15:00,57.1
+Cerro Navia,2023,16:00,57.3
+Cerro Navia,2023,17:00,55.9
+Cerro Navia,2023,18:00,57.6
+Cerro Navia,2023,19:00,57.8
+Cerro Navia,2023,20:00,55.7
+Cerro Navia,2023,21:00,55
+Cerro Navia,2023,22:00,52.7
+Cerro Navia,2023,23:00,51.4
+Cerro Navia,2024,00:00,50.9
+Cerro Navia,2024,01:00,50.9
+Cerro Navia,2024,02:00,48.5
+Cerro Navia,2024,03:00,46
+Cerro Navia,2024,04:00,47.1
+Cerro Navia,2024,05:00,48.8
+Cerro Navia,2024,06:00,51.5
+Cerro Navia,2024,07:00,53.6
+Cerro Navia,2024,08:00,56.8
+Cerro Navia,2024,09:00,59.7
+Cerro Navia,2024,10:00,58.6
+Cerro Navia,2024,11:00,58.2
+Cerro Navia,2024,12:00,57.6
+Cerro Navia,2024,13:00,58.1
+Cerro Navia,2024,14:00,57.3
+Cerro Navia,2024,15:00,57.2
+Cerro Navia,2024,16:00,56.9
+Cerro Navia,2024,17:00,56.6
+Cerro Navia,2024,18:00,56.3
+Cerro Navia,2024,19:00,56.1
+Cerro Navia,2024,20:00,55.1
+Cerro Navia,2024,21:00,54.4
+Cerro Navia,2024,22:00,52.4
+Cerro Navia,2024,23:00,51.2
+Cerro Navia,2025,00:00,51.7
+Cerro Navia,2025,01:00,48.2
+Cerro Navia,2025,02:00,47.2
+Cerro Navia,2025,03:00,46.7
+Cerro Navia,2025,04:00,46.6
+Cerro Navia,2025,05:00,49.3
+Cerro Navia,2025,06:00,51.6
+Cerro Navia,2025,07:00,54
+Cerro Navia,2025,08:00,56
+Cerro Navia,2025,09:00,58.8
+Cerro Navia,2025,10:00,58.7
+Cerro Navia,2025,11:00,59
+Cerro Navia,2025,12:00,59.9
+Cerro Navia,2025,13:00,59.4
+Cerro Navia,2025,14:00,58.9
+Cerro Navia,2025,15:00,58.6
+Cerro Navia,2025,16:00,57.3
+Cerro Navia,2025,17:00,56.5
+Cerro Navia,2025,18:00,56.2
+Cerro Navia,2025,19:00,56.5
+Cerro Navia,2025,20:00,57.6
+Cerro Navia,2025,21:00,54.6
+Cerro Navia,2025,22:00,54
+Cerro Navia,2025,23:00,50.6
+Concepción Barrio Norte,2023,00:00,57.1
+Concepción Barrio Norte,2023,01:00,53.1
+Concepción Barrio Norte,2023,02:00,52.2
+Concepción Barrio Norte,2023,03:00,51.9
+Concepción Barrio Norte,2023,04:00,57.8
+Concepción Barrio Norte,2023,05:00,56.8
+Concepción Barrio Norte,2023,06:00,59.1
+Concepción Barrio Norte,2023,07:00,61.6
+Concepción Barrio Norte,2023,08:00,62.1
+Concepción Barrio Norte,2023,09:00,61.4
+Concepción Barrio Norte,2023,10:00,61.3
+Concepción Barrio Norte,2023,11:00,61.6
+Concepción Barrio Norte,2023,12:00,61.9
+Concepción Barrio Norte,2023,13:00,62.1
+Concepción Barrio Norte,2023,14:00,61.9
+Concepción Barrio Norte,2023,15:00,62.2
+Concepción Barrio Norte,2023,16:00,61.9
+Concepción Barrio Norte,2023,17:00,62
+Concepción Barrio Norte,2023,18:00,62
+Concepción Barrio Norte,2023,19:00,61.5
+Concepción Barrio Norte,2023,20:00,61.1
+Concepción Barrio Norte,2023,21:00,58.5
+Concepción Barrio Norte,2023,22:00,56.9
+Concepción Barrio Norte,2023,23:00,55.4
+Concepción Barrio Norte,2024,00:00,68.2
+Concepción Barrio Norte,2024,01:00,70.7
+Concepción Barrio Norte,2024,02:00,69.1
+Concepción Barrio Norte,2024,03:00,65.7
+Concepción Barrio Norte,2024,04:00,70.5
+Concepción Barrio Norte,2024,05:00,68
+Concepción Barrio Norte,2024,06:00,70.4
+Concepción Barrio Norte,2024,07:00,74.1
+Concepción Barrio Norte,2024,08:00,75
+Concepción Barrio Norte,2024,09:00,74.7
+Concepción Barrio Norte,2024,10:00,70.9
+Concepción Barrio Norte,2024,11:00,72.7
+Concepción Barrio Norte,2024,12:00,67.6
+Concepción Barrio Norte,2024,13:00,70.6
+Concepción Barrio Norte,2024,14:00,71.5
+Concepción Barrio Norte,2024,15:00,73.2
+Concepción Barrio Norte,2024,16:00,67.9
+Concepción Barrio Norte,2024,17:00,66.2
+Concepción Barrio Norte,2024,18:00,73.6
+Concepción Barrio Norte,2024,19:00,73
+Concepción Barrio Norte,2024,20:00,73.1
+Concepción Barrio Norte,2024,21:00,70.2
+Concepción Barrio Norte,2024,22:00,69.4
+Concepción Barrio Norte,2024,23:00,69.8
+Concepción Barrio Norte,2025,00:00,54
+Concepción Barrio Norte,2025,01:00,51.8
+Concepción Barrio Norte,2025,02:00,51.2
+Concepción Barrio Norte,2025,03:00,50.7
+Concepción Barrio Norte,2025,04:00,49.9
+Concepción Barrio Norte,2025,05:00,51.6
+Concepción Barrio Norte,2025,06:00,57.5
+Concepción Barrio Norte,2025,07:00,61
+Concepción Barrio Norte,2025,08:00,61.6
+Concepción Barrio Norte,2025,09:00,60.5
+Concepción Barrio Norte,2025,10:00,60.6
+Concepción Barrio Norte,2025,11:00,60.8
+Concepción Barrio Norte,2025,12:00,61
+Concepción Barrio Norte,2025,13:00,60.9
+Concepción Barrio Norte,2025,14:00,60.9
+Concepción Barrio Norte,2025,15:00,61.1
+Concepción Barrio Norte,2025,16:00,61.2
+Concepción Barrio Norte,2025,17:00,61.9
+Concepción Barrio Norte,2025,18:00,61.7
+Concepción Barrio Norte,2025,19:00,60.9
+Concepción Barrio Norte,2025,20:00,59.6
+Concepción Barrio Norte,2025,21:00,58.5
+Concepción Barrio Norte,2025,22:00,57
+Concepción Barrio Norte,2025,23:00,54.9
+El Bosque,2023,00:00,59.1
+El Bosque,2023,01:00,56.8
+El Bosque,2023,02:00,54.9
+El Bosque,2023,03:00,55.7
+El Bosque,2023,04:00,55.3
+El Bosque,2023,05:00,56.7
+El Bosque,2023,06:00,60.1
+El Bosque,2023,07:00,61.8
+El Bosque,2023,08:00,62.3
+El Bosque,2023,09:00,62.4
+El Bosque,2023,10:00,61.9
+El Bosque,2023,11:00,62.5
+El Bosque,2023,12:00,62.5
+El Bosque,2023,13:00,62.3
+El Bosque,2023,14:00,63
+El Bosque,2023,15:00,62.6
+El Bosque,2023,16:00,62.7
+El Bosque,2023,17:00,62.9
+El Bosque,2023,18:00,63.3
+El Bosque,2023,19:00,63.2
+El Bosque,2023,20:00,62.9
+El Bosque,2023,21:00,61.9
+El Bosque,2023,22:00,61.6
+El Bosque,2023,23:00,60.9
+El Bosque,2024,00:00,59.2
+El Bosque,2024,01:00,57.4
+El Bosque,2024,02:00,55.6
+El Bosque,2024,03:00,53.5
+El Bosque,2024,04:00,54.2
+El Bosque,2024,05:00,57.4
+El Bosque,2024,06:00,60.6
+El Bosque,2024,07:00,62
+El Bosque,2024,08:00,62.2
+El Bosque,2024,09:00,64.3
+El Bosque,2024,10:00,62.7
+El Bosque,2024,11:00,64.4
+El Bosque,2024,12:00,63.1
+El Bosque,2024,13:00,63
+El Bosque,2024,14:00,63.9
+El Bosque,2024,15:00,62.5
+El Bosque,2024,16:00,62.6
+El Bosque,2024,17:00,62.9
+El Bosque,2024,18:00,70.4
+El Bosque,2024,19:00,63.2
+El Bosque,2024,20:00,63.2
+El Bosque,2024,21:00,62.2
+El Bosque,2024,22:00,62.2
+El Bosque,2024,23:00,61.6
+El Bosque,2025,00:00,61.2
+El Bosque,2025,01:00,56.9
+El Bosque,2025,02:00,56.8
+El Bosque,2025,03:00,54.9
+El Bosque,2025,04:00,54.7
+El Bosque,2025,05:00,57.2
+El Bosque,2025,06:00,60.6
+El Bosque,2025,07:00,62.2
+El Bosque,2025,08:00,62.4
+El Bosque,2025,09:00,61.9
+El Bosque,2025,10:00,62.6
+El Bosque,2025,11:00,62.6
+El Bosque,2025,12:00,62.3
+El Bosque,2025,13:00,63.1
+El Bosque,2025,14:00,62.9
+El Bosque,2025,15:00,63
+El Bosque,2025,16:00,62.7
+El Bosque,2025,17:00,63.6
+El Bosque,2025,18:00,63.7
+El Bosque,2025,19:00,63.4
+El Bosque,2025,20:00,63
+El Bosque,2025,21:00,63.1
+El Bosque,2025,22:00,62.7
+El Bosque,2025,23:00,62.2
+INFOCAP Concepción,2023,00:00,70.3
+INFOCAP Concepción,2023,01:00,68.7
+INFOCAP Concepción,2023,02:00,67.6
+INFOCAP Concepción,2023,03:00,66.9
+INFOCAP Concepción,2023,04:00,66.1
+INFOCAP Concepción,2023,05:00,66.7
+INFOCAP Concepción,2023,06:00,69.1
+INFOCAP Concepción,2023,07:00,70.9
+INFOCAP Concepción,2023,08:00,71.4
+INFOCAP Concepción,2023,09:00,71.3
+INFOCAP Concepción,2023,10:00,71.2
+INFOCAP Concepción,2023,11:00,71.9
+INFOCAP Concepción,2023,12:00,71.7
+INFOCAP Concepción,2023,13:00,71.9
+INFOCAP Concepción,2023,14:00,72.1
+INFOCAP Concepción,2023,15:00,71.3
+INFOCAP Concepción,2023,16:00,71.6
+INFOCAP Concepción,2023,17:00,71.5
+INFOCAP Concepción,2023,18:00,71.6
+INFOCAP Concepción,2023,19:00,71.5
+INFOCAP Concepción,2023,20:00,71.4
+INFOCAP Concepción,2023,21:00,71.8
+INFOCAP Concepción,2023,22:00,71.4
+INFOCAP Concepción,2023,23:00,70.5
+INFOCAP Concepción,2024,00:00,69.1
+INFOCAP Concepción,2024,01:00,67.5
+INFOCAP Concepción,2024,02:00,66.2
+INFOCAP Concepción,2024,03:00,65.3
+INFOCAP Concepción,2024,04:00,65.4
+INFOCAP Concepción,2024,05:00,66.5
+INFOCAP Concepción,2024,06:00,69.3
+INFOCAP Concepción,2024,07:00,71.3
+INFOCAP Concepción,2024,08:00,71.7
+INFOCAP Concepción,2024,09:00,71.5
+INFOCAP Concepción,2024,10:00,71.3
+INFOCAP Concepción,2024,11:00,71.4
+INFOCAP Concepción,2024,12:00,71.6
+INFOCAP Concepción,2024,13:00,71.5
+INFOCAP Concepción,2024,14:00,71.6
+INFOCAP Concepción,2024,15:00,71.1
+INFOCAP Concepción,2024,16:00,71.5
+INFOCAP Concepción,2024,17:00,71.4
+INFOCAP Concepción,2024,18:00,71.2
+INFOCAP Concepción,2024,19:00,71.2
+INFOCAP Concepción,2024,20:00,71.4
+INFOCAP Concepción,2024,21:00,71.2
+INFOCAP Concepción,2024,22:00,70.9
+INFOCAP Concepción,2024,23:00,70.4
+INFOCAP Concepción,2025,00:00,69.3
+INFOCAP Concepción,2025,01:00,67.9
+INFOCAP Concepción,2025,02:00,66.2
+INFOCAP Concepción,2025,03:00,65.4
+INFOCAP Concepción,2025,04:00,65.1
+INFOCAP Concepción,2025,05:00,66.4
+INFOCAP Concepción,2025,06:00,69.3
+INFOCAP Concepción,2025,07:00,71.2
+INFOCAP Concepción,2025,08:00,71.4
+INFOCAP Concepción,2025,09:00,71.5
+INFOCAP Concepción,2025,10:00,71.4
+INFOCAP Concepción,2025,11:00,71.2
+INFOCAP Concepción,2025,12:00,71.4
+INFOCAP Concepción,2025,13:00,71.4
+INFOCAP Concepción,2025,14:00,71.4
+INFOCAP Concepción,2025,15:00,71
+INFOCAP Concepción,2025,16:00,71.2
+INFOCAP Concepción,2025,17:00,71.3
+INFOCAP Concepción,2025,18:00,71.4
+INFOCAP Concepción,2025,19:00,71.6
+INFOCAP Concepción,2025,20:00,71.7
+INFOCAP Concepción,2025,21:00,71.7
+INFOCAP Concepción,2025,22:00,71.3
+INFOCAP Concepción,2025,23:00,70.4
+Independencia,2023,00:00,48.6
+Independencia,2023,01:00,48.4
+Independencia,2023,02:00,47
+Independencia,2023,03:00,45.3
+Independencia,2023,04:00,46.3
+Independencia,2023,05:00,49.1
+Independencia,2023,06:00,51
+Independencia,2023,07:00,51.2
+Independencia,2023,08:00,53.5
+Independencia,2023,09:00,54.6
+Independencia,2023,10:00,53.7
+Independencia,2023,11:00,53.8
+Independencia,2023,12:00,53.9
+Independencia,2023,13:00,53.1
+Independencia,2023,14:00,52.5
+Independencia,2023,15:00,53.5
+Independencia,2023,16:00,53.2
+Independencia,2023,17:00,54.2
+Independencia,2023,18:00,55
+Independencia,2023,19:00,55.6
+Independencia,2023,20:00,55.2
+Independencia,2023,21:00,55.7
+Independencia,2023,22:00,54.9
+Independencia,2023,23:00,51.7
+Independencia,2024,00:00,46.6
+Independencia,2024,01:00,47
+Independencia,2024,02:00,45
+Independencia,2024,03:00,43.8
+Independencia,2024,04:00,45.2
+Independencia,2024,05:00,46.1
+Independencia,2024,06:00,48.8
+Independencia,2024,07:00,50
+Independencia,2024,08:00,53.6
+Independencia,2024,09:00,53.8
+Independencia,2024,10:00,53.1
+Independencia,2024,11:00,54.1
+Independencia,2024,12:00,54.2
+Independencia,2024,13:00,52.7
+Independencia,2024,14:00,52.1
+Independencia,2024,15:00,52.9
+Independencia,2024,16:00,54.1
+Independencia,2024,17:00,54
+Independencia,2024,18:00,54.2
+Independencia,2024,19:00,54.2
+Independencia,2024,20:00,54.3
+Independencia,2024,21:00,54.4
+Independencia,2024,22:00,52.8
+Independencia,2024,23:00,49.1
+Independencia,2025,00:00,47.3
+Independencia,2025,01:00,45.9
+Independencia,2025,02:00,45.9
+Independencia,2025,03:00,45.2
+Independencia,2025,04:00,47.3
+Independencia,2025,05:00,46.1
+Independencia,2025,06:00,47.5
+Independencia,2025,07:00,49.3
+Independencia,2025,08:00,53.1
+Independencia,2025,09:00,53.6
+Independencia,2025,10:00,57.6
+Independencia,2025,11:00,55.1
+Independencia,2025,12:00,57
+Independencia,2025,13:00,57.1
+Independencia,2025,14:00,54.1
+Independencia,2025,15:00,56.5
+Independencia,2025,16:00,57.9
+Independencia,2025,17:00,58.2
+Independencia,2025,18:00,57.9
+Independencia,2025,19:00,54.7
+Independencia,2025,20:00,54.6
+Independencia,2025,21:00,54.5
+Independencia,2025,22:00,53.7
+Independencia,2025,23:00,49.9
+La Florida,2023,00:00,62.1
+La Florida,2023,01:00,60.3
+La Florida,2023,02:00,59.4
+La Florida,2023,03:00,57.5
+La Florida,2023,04:00,57.7
+La Florida,2023,05:00,59.7
+La Florida,2023,06:00,63.1
+La Florida,2023,07:00,65.6
+La Florida,2023,08:00,65.4
+La Florida,2023,09:00,65.3
+La Florida,2023,10:00,64.8
+La Florida,2023,11:00,64.5
+La Florida,2023,12:00,64.8
+La Florida,2023,13:00,65.2
+La Florida,2023,14:00,65.4
+La Florida,2023,15:00,65.3
+La Florida,2023,16:00,65.5
+La Florida,2023,17:00,65.5
+La Florida,2023,18:00,65.9
+La Florida,2023,19:00,65.8
+La Florida,2023,20:00,65.6
+La Florida,2023,21:00,65.3
+La Florida,2023,22:00,64.3
+La Florida,2023,23:00,63.4
+La Florida,2024,00:00,61.5
+La Florida,2024,01:00,59.9
+La Florida,2024,02:00,58.2
+La Florida,2024,03:00,57.2
+La Florida,2024,04:00,57.8
+La Florida,2024,05:00,59.2
+La Florida,2024,06:00,62.9
+La Florida,2024,07:00,65.7
+La Florida,2024,08:00,65
+La Florida,2024,09:00,64.8
+La Florida,2024,10:00,64.3
+La Florida,2024,11:00,63.9
+La Florida,2024,12:00,64.1
+La Florida,2024,13:00,64.4
+La Florida,2024,14:00,64.7
+La Florida,2024,15:00,64.7
+La Florida,2024,16:00,64.9
+La Florida,2024,17:00,65.2
+La Florida,2024,18:00,65.4
+La Florida,2024,19:00,65.3
+La Florida,2024,20:00,65.1
+La Florida,2024,21:00,65.2
+La Florida,2024,22:00,64.2
+La Florida,2024,23:00,63.2
+La Florida,2025,00:00,61.7
+La Florida,2025,01:00,60
+La Florida,2025,02:00,58.5
+La Florida,2025,03:00,56.9
+La Florida,2025,04:00,57
+La Florida,2025,05:00,58.9
+La Florida,2025,06:00,63
+La Florida,2025,07:00,64.8
+La Florida,2025,08:00,64.4
+La Florida,2025,09:00,64.3
+La Florida,2025,10:00,63.8
+La Florida,2025,11:00,63.6
+La Florida,2025,12:00,63.6
+La Florida,2025,13:00,64.2
+La Florida,2025,14:00,64.5
+La Florida,2025,15:00,64.6
+La Florida,2025,16:00,64.5
+La Florida,2025,17:00,64.8
+La Florida,2025,18:00,65.3
+La Florida,2025,19:00,65.2
+La Florida,2025,20:00,65
+La Florida,2025,21:00,65
+La Florida,2025,22:00,64.2
+La Florida,2025,23:00,63.1
+Las Condes,2023,00:00,61.9
+Las Condes,2023,01:00,60.5
+Las Condes,2023,02:00,58.8
+Las Condes,2023,03:00,57.8
+Las Condes,2023,04:00,57.3
+Las Condes,2023,05:00,57.8
+Las Condes,2023,06:00,62.3
+Las Condes,2023,07:00,67
+Las Condes,2023,08:00,67
+Las Condes,2023,09:00,67.4
+Las Condes,2023,10:00,66.9
+Las Condes,2023,11:00,67.2
+Las Condes,2023,12:00,67.1
+Las Condes,2023,13:00,67.5
+Las Condes,2023,14:00,67
+Las Condes,2023,15:00,66.9
+Las Condes,2023,16:00,66.9
+Las Condes,2023,17:00,67
+Las Condes,2023,18:00,66.5
+Las Condes,2023,19:00,66.5
+Las Condes,2023,20:00,66.5
+Las Condes,2023,21:00,65.5
+Las Condes,2023,22:00,64.6
+Las Condes,2023,23:00,63.4
+Las Condes,2024,00:00,61
+Las Condes,2024,01:00,59.7
+Las Condes,2024,02:00,58.1
+Las Condes,2024,03:00,56.9
+Las Condes,2024,04:00,56.6
+Las Condes,2024,05:00,57.9
+Las Condes,2024,06:00,62.1
+Las Condes,2024,07:00,66.5
+Las Condes,2024,08:00,66.5
+Las Condes,2024,09:00,67.2
+Las Condes,2024,10:00,66.9
+Las Condes,2024,11:00,67
+Las Condes,2024,12:00,67
+Las Condes,2024,13:00,66.8
+Las Condes,2024,14:00,66.8
+Las Condes,2024,15:00,66.7
+Las Condes,2024,16:00,66.9
+Las Condes,2024,17:00,67.1
+Las Condes,2024,18:00,66.3
+Las Condes,2024,19:00,66
+Las Condes,2024,20:00,66
+Las Condes,2024,21:00,65.1
+Las Condes,2024,22:00,64
+Las Condes,2024,23:00,62.8
+Las Condes,2025,00:00,60.9
+Las Condes,2025,01:00,59.3
+Las Condes,2025,02:00,57.9
+Las Condes,2025,03:00,56.6
+Las Condes,2025,04:00,56.2
+Las Condes,2025,05:00,57.7
+Las Condes,2025,06:00,62.4
+Las Condes,2025,07:00,66.6
+Las Condes,2025,08:00,66.4
+Las Condes,2025,09:00,66.8
+Las Condes,2025,10:00,66.6
+Las Condes,2025,11:00,66.4
+Las Condes,2025,12:00,66.4
+Las Condes,2025,13:00,66.5
+Las Condes,2025,14:00,66.3
+Las Condes,2025,15:00,66.1
+Las Condes,2025,16:00,66.2
+Las Condes,2025,17:00,66.3
+Las Condes,2025,18:00,65.8
+Las Condes,2025,19:00,65.9
+Las Condes,2025,20:00,66
+Las Condes,2025,21:00,65
+Las Condes,2025,22:00,64.1
+Las Condes,2025,23:00,62.7
+Playa Ancha,2023,00:00,60.2
+Playa Ancha,2023,01:00,58.4
+Playa Ancha,2023,02:00,56.6
+Playa Ancha,2023,03:00,55.1
+Playa Ancha,2023,04:00,54.2
+Playa Ancha,2023,05:00,59.1
+Playa Ancha,2023,06:00,63.3
+Playa Ancha,2023,07:00,65.8
+Playa Ancha,2023,08:00,66.7
+Playa Ancha,2023,09:00,66.9
+Playa Ancha,2023,10:00,66.9
+Playa Ancha,2023,11:00,67.2
+Playa Ancha,2023,12:00,67.6
+Playa Ancha,2023,13:00,67.8
+Playa Ancha,2023,14:00,67.8
+Playa Ancha,2023,15:00,67.7
+Playa Ancha,2023,16:00,67.7
+Playa Ancha,2023,17:00,67.6
+Playa Ancha,2023,18:00,67.5
+Playa Ancha,2023,19:00,67
+Playa Ancha,2023,20:00,66.2
+Playa Ancha,2023,21:00,65.5
+Playa Ancha,2023,22:00,63.3
+Playa Ancha,2023,23:00,62
+Playa Ancha,2024,00:00,60.1
+Playa Ancha,2024,01:00,54.5
+Playa Ancha,2024,02:00,52.7
+Playa Ancha,2024,03:00,52.6
+Playa Ancha,2024,04:00,52.8
+Playa Ancha,2024,05:00,56.7
+Playa Ancha,2024,06:00,63.1
+Playa Ancha,2024,07:00,66.4
+Playa Ancha,2024,08:00,67
+Playa Ancha,2024,09:00,67.1
+Playa Ancha,2024,10:00,67.2
+Playa Ancha,2024,11:00,67.3
+Playa Ancha,2024,12:00,67.5
+Playa Ancha,2024,13:00,67.4
+Playa Ancha,2024,14:00,67.5
+Playa Ancha,2024,15:00,67.4
+Playa Ancha,2024,16:00,67.3
+Playa Ancha,2024,17:00,67.4
+Playa Ancha,2024,18:00,66.9
+Playa Ancha,2024,19:00,66.6
+Playa Ancha,2024,20:00,65.6
+Playa Ancha,2024,21:00,64.2
+Playa Ancha,2024,22:00,61.6
+Playa Ancha,2024,23:00,63
+Playa Ancha,2025,00:00,59.6
+Playa Ancha,2025,01:00,56.5
+Playa Ancha,2025,02:00,54.5
+Playa Ancha,2025,03:00,54.3
+Playa Ancha,2025,04:00,53.1
+Playa Ancha,2025,05:00,57.1
+Playa Ancha,2025,06:00,63.3
+Playa Ancha,2025,07:00,67
+Playa Ancha,2025,08:00,67.6
+Playa Ancha,2025,09:00,67.6
+Playa Ancha,2025,10:00,67.8
+Playa Ancha,2025,11:00,67.7
+Playa Ancha,2025,12:00,67.9
+Playa Ancha,2025,13:00,67.9
+Playa Ancha,2025,14:00,68
+Playa Ancha,2025,15:00,67.8
+Playa Ancha,2025,16:00,68
+Playa Ancha,2025,17:00,68
+Playa Ancha,2025,18:00,67.8
+Playa Ancha,2025,19:00,67.4
+Playa Ancha,2025,20:00,66.4
+Playa Ancha,2025,21:00,64.9
+Playa Ancha,2025,22:00,62.2
+Playa Ancha,2025,23:00,59.7
+Providencia,2023,00:00,58.6
+Providencia,2023,01:00,56.3
+Providencia,2023,02:00,54.7
+Providencia,2023,03:00,53.7
+Providencia,2023,04:00,53.5
+Providencia,2023,05:00,54.4
+Providencia,2023,06:00,56.8
+Providencia,2023,07:00,60.9
+Providencia,2023,08:00,61.7
+Providencia,2023,09:00,62
+Providencia,2023,10:00,62.7
+Providencia,2023,11:00,62.7
+Providencia,2023,12:00,62.7
+Providencia,2023,13:00,62.8
+Providencia,2023,14:00,62.5
+Providencia,2023,15:00,62.7
+Providencia,2023,16:00,62.7
+Providencia,2023,17:00,63.1
+Providencia,2023,18:00,62.7
+Providencia,2023,19:00,62.9
+Providencia,2023,20:00,63
+Providencia,2023,21:00,61.5
+Providencia,2023,22:00,60.7
+Providencia,2023,23:00,59.4
+Providencia,2024,00:00,58.3
+Providencia,2024,01:00,55.6
+Providencia,2024,02:00,54
+Providencia,2024,03:00,53
+Providencia,2024,04:00,53
+Providencia,2024,05:00,54.9
+Providencia,2024,06:00,57.1
+Providencia,2024,07:00,60.8
+Providencia,2024,08:00,61.9
+Providencia,2024,09:00,62.3
+Providencia,2024,10:00,63.2
+Providencia,2024,11:00,62.7
+Providencia,2024,12:00,62.5
+Providencia,2024,13:00,62.5
+Providencia,2024,14:00,62.2
+Providencia,2024,15:00,62.3
+Providencia,2024,16:00,62.8
+Providencia,2024,17:00,62.6
+Providencia,2024,18:00,62.4
+Providencia,2024,19:00,62.6
+Providencia,2024,20:00,62.5
+Providencia,2024,21:00,61.8
+Providencia,2024,22:00,60.2
+Providencia,2024,23:00,59
+Providencia,2025,00:00,57
+Providencia,2025,01:00,55.4
+Providencia,2025,02:00,54
+Providencia,2025,03:00,53
+Providencia,2025,04:00,52.8
+Providencia,2025,05:00,54.5
+Providencia,2025,06:00,56.7
+Providencia,2025,07:00,60.5
+Providencia,2025,08:00,61.5
+Providencia,2025,09:00,61.6
+Providencia,2025,10:00,61.7
+Providencia,2025,11:00,61.7
+Providencia,2025,12:00,61.8
+Providencia,2025,13:00,61.7
+Providencia,2025,14:00,61.7
+Providencia,2025,15:00,61.5
+Providencia,2025,16:00,61.8
+Providencia,2025,17:00,62.1
+Providencia,2025,18:00,62.3
+Providencia,2025,19:00,62.3
+Providencia,2025,20:00,61.9
+Providencia,2025,21:00,61
+Providencia,2025,22:00,59.9
+Providencia,2025,23:00,58.8
+Providencia Reemplazo,2024,00:00,55.8
+Providencia Reemplazo,2024,01:00,55.6
+Providencia Reemplazo,2024,02:00,54.7
+Providencia Reemplazo,2024,03:00,55.1
+Providencia Reemplazo,2024,04:00,54.9
+Providencia Reemplazo,2024,05:00,56.4
+Providencia Reemplazo,2024,06:00,59.9
+Providencia Reemplazo,2024,07:00,63.8
+Providencia Reemplazo,2024,08:00,64.9
+Providencia Reemplazo,2024,09:00,74
+Providencia Reemplazo,2024,10:00,74.4
+Providencia Reemplazo,2024,11:00,64.2
+Providencia Reemplazo,2024,12:00,63.8
+Providencia Reemplazo,2024,13:00,70.3
+Providencia Reemplazo,2024,14:00,73.4
+Providencia Reemplazo,2024,15:00,65.3
+Providencia Reemplazo,2024,16:00,64.4
+Providencia Reemplazo,2024,17:00,65
+Providencia Reemplazo,2024,18:00,63.2
+Providencia Reemplazo,2024,19:00,62.9
+Providencia Reemplazo,2024,20:00,62.3
+Providencia Reemplazo,2024,21:00,60.8
+Providencia Reemplazo,2024,22:00,58.5
+Providencia Reemplazo,2024,23:00,56.8
+Puente Alto,2023,00:00,64.8
+Puente Alto,2023,01:00,62.7
+Puente Alto,2023,02:00,61.3
+Puente Alto,2023,03:00,59.7
+Puente Alto,2023,04:00,60.2
+Puente Alto,2023,05:00,63
+Puente Alto,2023,06:00,65.4
+Puente Alto,2023,07:00,65.8
+Puente Alto,2023,08:00,66
+Puente Alto,2023,09:00,66.5
+Puente Alto,2023,10:00,66.2
+Puente Alto,2023,11:00,66.4
+Puente Alto,2023,12:00,66.9
+Puente Alto,2023,13:00,67
+Puente Alto,2023,14:00,66.6
+Puente Alto,2023,15:00,66.8
+Puente Alto,2023,16:00,66.8
+Puente Alto,2023,17:00,66.9
+Puente Alto,2023,18:00,67.3
+Puente Alto,2023,19:00,67.5
+Puente Alto,2023,20:00,67.2
+Puente Alto,2023,21:00,66.9
+Puente Alto,2023,22:00,67.1
+Puente Alto,2023,23:00,65.3
+Puente Alto,2024,00:00,62.8
+Puente Alto,2024,01:00,61
+Puente Alto,2024,02:00,60
+Puente Alto,2024,03:00,58.5
+Puente Alto,2024,04:00,58.1
+Puente Alto,2024,05:00,62.1
+Puente Alto,2024,06:00,64.8
+Puente Alto,2024,07:00,65.5
+Puente Alto,2024,08:00,65.7
+Puente Alto,2024,09:00,65.4
+Puente Alto,2024,10:00,65.2
+Puente Alto,2024,11:00,65.7
+Puente Alto,2024,12:00,66.4
+Puente Alto,2024,13:00,66.1
+Puente Alto,2024,14:00,66.3
+Puente Alto,2024,15:00,65.8
+Puente Alto,2024,16:00,66
+Puente Alto,2024,17:00,65.8
+Puente Alto,2024,18:00,66.7
+Puente Alto,2024,19:00,66.6
+Puente Alto,2024,20:00,66.6
+Puente Alto,2024,21:00,66.4
+Puente Alto,2024,22:00,66
+Puente Alto,2024,23:00,64.9
+Puente Alto,2025,00:00,65.6
+Puente Alto,2025,01:00,64
+Puente Alto,2025,02:00,62.6
+Puente Alto,2025,03:00,61.5
+Puente Alto,2025,04:00,62.4
+Puente Alto,2025,05:00,63.1
+Puente Alto,2025,06:00,65.6
+Puente Alto,2025,07:00,67.4
+Puente Alto,2025,08:00,67.8
+Puente Alto,2025,09:00,67.1
+Puente Alto,2025,10:00,67.3
+Puente Alto,2025,11:00,67.4
+Puente Alto,2025,12:00,67.7
+Puente Alto,2025,13:00,67.7
+Puente Alto,2025,14:00,68.1
+Puente Alto,2025,15:00,67.8
+Puente Alto,2025,16:00,67.9
+Puente Alto,2025,17:00,68.3
+Puente Alto,2025,18:00,68.6
+Puente Alto,2025,19:00,68.6
+Puente Alto,2025,20:00,68.6
+Puente Alto,2025,21:00,68.5
+Puente Alto,2025,22:00,68.1
+Puente Alto,2025,23:00,66.8
+San Bernardo,2023,00:00,65.7
+San Bernardo,2023,01:00,64.5
+San Bernardo,2023,02:00,63.4
+San Bernardo,2023,03:00,62.4
+San Bernardo,2023,04:00,62
+San Bernardo,2023,05:00,63.5
+San Bernardo,2023,06:00,66.3
+San Bernardo,2023,07:00,65.8
+San Bernardo,2023,08:00,66.7
+San Bernardo,2023,09:00,67.7
+San Bernardo,2023,10:00,67.5
+San Bernardo,2023,11:00,67.8
+San Bernardo,2023,12:00,68
+San Bernardo,2023,13:00,68.1
+San Bernardo,2023,14:00,68.4
+San Bernardo,2023,15:00,68.5
+San Bernardo,2023,16:00,68.6
+San Bernardo,2023,17:00,69
+San Bernardo,2023,18:00,69.3
+San Bernardo,2023,19:00,69.3
+San Bernardo,2023,20:00,69.1
+San Bernardo,2023,21:00,68.5
+San Bernardo,2023,22:00,67.7
+San Bernardo,2023,23:00,66.8
+San Bernardo,2024,00:00,65
+San Bernardo,2024,01:00,63.6
+San Bernardo,2024,02:00,62.5
+San Bernardo,2024,03:00,61.8
+San Bernardo,2024,04:00,62.1
+San Bernardo,2024,05:00,64.4
+San Bernardo,2024,06:00,67.6
+San Bernardo,2024,07:00,67.4
+San Bernardo,2024,08:00,67.6
+San Bernardo,2024,09:00,67.9
+San Bernardo,2024,10:00,68
+San Bernardo,2024,11:00,68.2
+San Bernardo,2024,12:00,68.2
+San Bernardo,2024,13:00,68.5
+San Bernardo,2024,14:00,68.5
+San Bernardo,2024,15:00,68.7
+San Bernardo,2024,16:00,68.9
+San Bernardo,2024,17:00,69.3
+San Bernardo,2024,18:00,69.5
+San Bernardo,2024,19:00,69.4
+San Bernardo,2024,20:00,69
+San Bernardo,2024,21:00,68.2
+San Bernardo,2024,22:00,67.3
+San Bernardo,2024,23:00,66.2
+San Bernardo,2025,00:00,65.3
+San Bernardo,2025,01:00,63.8
+San Bernardo,2025,02:00,62.5
+San Bernardo,2025,03:00,62
+San Bernardo,2025,04:00,62.4
+San Bernardo,2025,05:00,64.7
+San Bernardo,2025,06:00,67.5
+San Bernardo,2025,07:00,67.1
+San Bernardo,2025,08:00,67.5
+San Bernardo,2025,09:00,68
+San Bernardo,2025,10:00,68.1
+San Bernardo,2025,11:00,68.5
+San Bernardo,2025,12:00,68.3
+San Bernardo,2025,13:00,68.3
+San Bernardo,2025,14:00,68.5
+San Bernardo,2025,15:00,68.7
+San Bernardo,2025,16:00,68.9
+San Bernardo,2025,17:00,69.3
+San Bernardo,2025,18:00,69.4
+San Bernardo,2025,19:00,69.4
+San Bernardo,2025,20:00,69
+San Bernardo,2025,21:00,68.3
+San Bernardo,2025,22:00,67.4
+San Bernardo,2025,23:00,66.4
+San Miguel,2023,00:00,61.5
+San Miguel,2023,01:00,60
+San Miguel,2023,02:00,57.9
+San Miguel,2023,03:00,57.1
+San Miguel,2023,04:00,57.2
+San Miguel,2023,05:00,60.4
+San Miguel,2023,06:00,62.7
+San Miguel,2023,07:00,64.7
+San Miguel,2023,08:00,64.4
+San Miguel,2023,09:00,64
+San Miguel,2023,10:00,63.6
+San Miguel,2023,11:00,63.9
+San Miguel,2023,12:00,63.6
+San Miguel,2023,13:00,64.2
+San Miguel,2023,14:00,63.9
+San Miguel,2023,15:00,63.9
+San Miguel,2023,16:00,64.1
+San Miguel,2023,17:00,64.3
+San Miguel,2023,18:00,64.5
+San Miguel,2023,19:00,64.1
+San Miguel,2023,20:00,63.8
+San Miguel,2023,21:00,63.5
+San Miguel,2023,22:00,63.5
+San Miguel,2023,23:00,62.3
+San Miguel,2024,00:00,61.6
+San Miguel,2024,01:00,59.4
+San Miguel,2024,02:00,58.1
+San Miguel,2024,03:00,56.8
+San Miguel,2024,04:00,55.5
+San Miguel,2024,05:00,58.1
+San Miguel,2024,06:00,61.5
+San Miguel,2024,07:00,64.1
+San Miguel,2024,08:00,64.3
+San Miguel,2024,09:00,63.6
+San Miguel,2024,10:00,63.5
+San Miguel,2024,11:00,63.6
+San Miguel,2024,12:00,63.6
+San Miguel,2024,13:00,63.6
+San Miguel,2024,14:00,63.6
+San Miguel,2024,15:00,63.7
+San Miguel,2024,16:00,63.8
+San Miguel,2024,17:00,63.8
+San Miguel,2024,18:00,64.1
+San Miguel,2024,19:00,64.1
+San Miguel,2024,20:00,63.8
+San Miguel,2024,21:00,63.3
+San Miguel,2024,22:00,62.8
+San Miguel,2024,23:00,62.2
+San Miguel,2025,00:00,61
+San Miguel,2025,01:00,59
+San Miguel,2025,02:00,57.3
+San Miguel,2025,03:00,55.7
+San Miguel,2025,04:00,55.8
+San Miguel,2025,05:00,57.8
+San Miguel,2025,06:00,61.1
+San Miguel,2025,07:00,63.7
+San Miguel,2025,08:00,64.3
+San Miguel,2025,09:00,63.8
+San Miguel,2025,10:00,63.7
+San Miguel,2025,11:00,63.7
+San Miguel,2025,12:00,63.6
+San Miguel,2025,13:00,63.3
+San Miguel,2025,14:00,63.6
+San Miguel,2025,15:00,64
+San Miguel,2025,16:00,63.5
+San Miguel,2025,17:00,63.3
+San Miguel,2025,18:00,63.5
+San Miguel,2025,19:00,63.7
+San Miguel,2025,20:00,63.1
+San Miguel,2025,21:00,63
+San Miguel,2025,22:00,62.1
+San Miguel,2025,23:00,61.8
+San Pedro de La Paz,2024,00:00,69.9
+San Pedro de La Paz,2024,01:00,68.5
+San Pedro de La Paz,2024,02:00,67
+San Pedro de La Paz,2024,03:00,66.4
+San Pedro de La Paz,2024,04:00,67
+San Pedro de La Paz,2024,05:00,68.5
+San Pedro de La Paz,2024,06:00,71
+San Pedro de La Paz,2024,07:00,70.8
+San Pedro de La Paz,2024,08:00,70.8
+San Pedro de La Paz,2024,09:00,71.5
+San Pedro de La Paz,2024,10:00,71.6
+San Pedro de La Paz,2024,11:00,71.9
+San Pedro de La Paz,2024,12:00,71.5
+San Pedro de La Paz,2024,13:00,70.9
+San Pedro de La Paz,2024,14:00,70.5
+San Pedro de La Paz,2024,15:00,70.7
+San Pedro de La Paz,2024,16:00,70.1
+San Pedro de La Paz,2024,17:00,69.8
+San Pedro de La Paz,2024,18:00,69.8
+San Pedro de La Paz,2024,19:00,69.6
+San Pedro de La Paz,2024,20:00,69.8
+San Pedro de La Paz,2024,21:00,70.3
+San Pedro de La Paz,2024,22:00,70.9
+San Pedro de La Paz,2024,23:00,70.7
+San Pedro de La Paz,2025,00:00,70
+San Pedro de La Paz,2025,01:00,68.4
+San Pedro de La Paz,2025,02:00,67.4
+San Pedro de La Paz,2025,03:00,66.7
+San Pedro de La Paz,2025,04:00,67.2
+San Pedro de La Paz,2025,05:00,68.7
+San Pedro de La Paz,2025,06:00,70.9
+San Pedro de La Paz,2025,07:00,71.1
+San Pedro de La Paz,2025,08:00,70.8
+San Pedro de La Paz,2025,09:00,71.4
+San Pedro de La Paz,2025,10:00,71.5
+San Pedro de La Paz,2025,11:00,71.3
+San Pedro de La Paz,2025,12:00,70.8
+San Pedro de La Paz,2025,13:00,70.8
+San Pedro de La Paz,2025,14:00,70.7
+San Pedro de La Paz,2025,15:00,70.6
+San Pedro de La Paz,2025,16:00,70.2
+San Pedro de La Paz,2025,17:00,70
+San Pedro de La Paz,2025,18:00,70
+San Pedro de La Paz,2025,19:00,70
+San Pedro de La Paz,2025,20:00,69.7
+San Pedro de La Paz,2025,21:00,70.3
+San Pedro de La Paz,2025,22:00,70.9
+San Pedro de La Paz,2025,23:00,70.8
+Valparaíso,2023,00:00,60.6
+Valparaíso,2023,01:00,59.3
+Valparaíso,2023,02:00,58
+Valparaíso,2023,03:00,57.1
+Valparaíso,2023,04:00,57
+Valparaíso,2023,05:00,57.6
+Valparaíso,2023,06:00,61.4
+Valparaíso,2023,07:00,64.5
+Valparaíso,2023,08:00,65.4
+Valparaíso,2023,09:00,65.1
+Valparaíso,2023,10:00,65.7
+Valparaíso,2023,11:00,65.4
+Valparaíso,2023,12:00,69.4
+Valparaíso,2023,13:00,67.3
+Valparaíso,2023,14:00,65.7
+Valparaíso,2023,15:00,66.1
+Valparaíso,2023,16:00,66.9
+Valparaíso,2023,17:00,67.4
+Valparaíso,2023,18:00,65.7
+Valparaíso,2023,19:00,66.5
+Valparaíso,2023,20:00,65.6
+Valparaíso,2023,21:00,65.4
+Valparaíso,2023,22:00,63.6
+Valparaíso,2023,23:00,62.8
+Valparaíso,2024,00:00,61.3
+Valparaíso,2024,01:00,58.7
+Valparaíso,2024,02:00,57.5
+Valparaíso,2024,03:00,57.1
+Valparaíso,2024,04:00,56.8
+Valparaíso,2024,05:00,57.5
+Valparaíso,2024,06:00,61.2
+Valparaíso,2024,07:00,64.7
+Valparaíso,2024,08:00,65.4
+Valparaíso,2024,09:00,65.6
+Valparaíso,2024,10:00,65.8
+Valparaíso,2024,11:00,65.7
+Valparaíso,2024,12:00,68.5
+Valparaíso,2024,13:00,66.8
+Valparaíso,2024,14:00,66.3
+Valparaíso,2024,15:00,65.8
+Valparaíso,2024,16:00,66.3
+Valparaíso,2024,17:00,66.4
+Valparaíso,2024,18:00,66.5
+Valparaíso,2024,19:00,67.2
+Valparaíso,2024,20:00,66.1
+Valparaíso,2024,21:00,65.9
+Valparaíso,2024,22:00,63.5
+Valparaíso,2024,23:00,62.1
+Valparaíso,2025,00:00,61.9
+Valparaíso,2025,01:00,59.3
+Valparaíso,2025,02:00,58.9
+Valparaíso,2025,03:00,57.9
+Valparaíso,2025,04:00,56.5
+Valparaíso,2025,05:00,59.1
+Valparaíso,2025,06:00,61.9
+Valparaíso,2025,07:00,65
+Valparaíso,2025,08:00,65.9
+Valparaíso,2025,09:00,65.8
+Valparaíso,2025,10:00,66.1
+Valparaíso,2025,11:00,66
+Valparaíso,2025,12:00,66.2
+Valparaíso,2025,13:00,66.1
+Valparaíso,2025,14:00,66.2
+Valparaíso,2025,15:00,66.2
+Valparaíso,2025,16:00,66
+Valparaíso,2025,17:00,66.3
+Valparaíso,2025,18:00,66.3
+Valparaíso,2025,19:00,66.3
+Valparaíso,2025,20:00,65.7
+Valparaíso,2025,21:00,64.7
+Valparaíso,2025,22:00,63.5
+Valparaíso,2025,23:00,62.4
+Viña del Mar,2023,00:00,62.2
+Viña del Mar,2023,01:00,60.5
+Viña del Mar,2023,02:00,59.4
+Viña del Mar,2023,03:00,59.5
+Viña del Mar,2023,04:00,57.5
+Viña del Mar,2023,05:00,60.6
+Viña del Mar,2023,06:00,65
+Viña del Mar,2023,07:00,68.2
+Viña del Mar,2023,08:00,68.4
+Viña del Mar,2023,09:00,68
+Viña del Mar,2023,10:00,67.8
+Viña del Mar,2023,11:00,68.2
+Viña del Mar,2023,12:00,68
+Viña del Mar,2023,13:00,68.5
+Viña del Mar,2023,14:00,68.6
+Viña del Mar,2023,15:00,68.3
+Viña del Mar,2023,16:00,67.9
+Viña del Mar,2023,17:00,67.8
+Viña del Mar,2023,18:00,67
+Viña del Mar,2023,19:00,68
+Viña del Mar,2023,20:00,67.7
+Viña del Mar,2023,21:00,67
+Viña del Mar,2023,22:00,65.7
+Viña del Mar,2023,23:00,64.3
+Viña del Mar,2024,00:00,62
+Viña del Mar,2024,01:00,60.3
+Viña del Mar,2024,02:00,58.8
+Viña del Mar,2024,03:00,58.1
+Viña del Mar,2024,04:00,57.9
+Viña del Mar,2024,05:00,60.9
+Viña del Mar,2024,06:00,64.8
+Viña del Mar,2024,07:00,68.5
+Viña del Mar,2024,08:00,68.7
+Viña del Mar,2024,09:00,68.5
+Viña del Mar,2024,10:00,68.3
+Viña del Mar,2024,11:00,68
+Viña del Mar,2024,12:00,68.6
+Viña del Mar,2024,13:00,68.3
+Viña del Mar,2024,14:00,68.4
+Viña del Mar,2024,15:00,68.6
+Viña del Mar,2024,16:00,68.4
+Viña del Mar,2024,17:00,67.6
+Viña del Mar,2024,18:00,67.5
+Viña del Mar,2024,19:00,67.8
+Viña del Mar,2024,20:00,67.7
+Viña del Mar,2024,21:00,66.8
+Viña del Mar,2024,22:00,65.2
+Viña del Mar,2024,23:00,64
+Viña del Mar,2025,00:00,62.6
+Viña del Mar,2025,01:00,60.7
+Viña del Mar,2025,02:00,59.3
+Viña del Mar,2025,03:00,58.2
+Viña del Mar,2025,04:00,58.1
+Viña del Mar,2025,05:00,61.5
+Viña del Mar,2025,06:00,65.3
+Viña del Mar,2025,07:00,68.6
+Viña del Mar,2025,08:00,68.8
+Viña del Mar,2025,09:00,68.3
+Viña del Mar,2025,10:00,67.8
+Viña del Mar,2025,11:00,67.9
+Viña del Mar,2025,12:00,68.3
+Viña del Mar,2025,13:00,68.3
+Viña del Mar,2025,14:00,68.5
+Viña del Mar,2025,15:00,68.3
+Viña del Mar,2025,16:00,68.2
+Viña del Mar,2025,17:00,67.8
+Viña del Mar,2025,18:00,67.6
+Viña del Mar,2025,19:00,67.7
+Viña del Mar,2025,20:00,67.8
+Viña del Mar,2025,21:00,67.1
+Viña del Mar,2025,22:00,65.8
+Viña del Mar,2025,23:00,64.1
+Viña del Mar Reemplazo,2024,00:00,62.1
+Viña del Mar Reemplazo,2024,01:00,60.4
+Viña del Mar Reemplazo,2024,02:00,58.3
+Viña del Mar Reemplazo,2024,03:00,57.4
+Viña del Mar Reemplazo,2024,04:00,58.9
+Viña del Mar Reemplazo,2024,05:00,60.3
+Viña del Mar Reemplazo,2024,06:00,64.6
+Viña del Mar Reemplazo,2024,07:00,67.7
+Viña del Mar Reemplazo,2024,08:00,67.6
+Viña del Mar Reemplazo,2024,09:00,66.9
+Viña del Mar Reemplazo,2024,10:00,66.5
+Viña del Mar Reemplazo,2024,11:00,66.7
+Viña del Mar Reemplazo,2024,12:00,70.4
+Viña del Mar Reemplazo,2024,13:00,69
+Viña del Mar Reemplazo,2024,14:00,67
+Viña del Mar Reemplazo,2024,15:00,67.2
+Viña del Mar Reemplazo,2024,16:00,67.1
+Viña del Mar Reemplazo,2024,17:00,67.7
+Viña del Mar Reemplazo,2024,18:00,66.2
+Viña del Mar Reemplazo,2024,19:00,66.9
+Viña del Mar Reemplazo,2024,20:00,66.6
+Viña del Mar Reemplazo,2024,21:00,66.6
+Viña del Mar Reemplazo,2024,22:00,65.3
+Viña del Mar Reemplazo,2024,23:00,63.5
+Ñuñoa,2023,00:00,48.7
+Ñuñoa,2023,01:00,47.3
+Ñuñoa,2023,02:00,46.3
+Ñuñoa,2023,03:00,45.8
+Ñuñoa,2023,04:00,45.8
+Ñuñoa,2023,05:00,47
+Ñuñoa,2023,06:00,49.2
+Ñuñoa,2023,07:00,54.5
+Ñuñoa,2023,08:00,56
+Ñuñoa,2023,09:00,55.3
+Ñuñoa,2023,10:00,56.1
+Ñuñoa,2023,11:00,56.1
+Ñuñoa,2023,12:00,57.9
+Ñuñoa,2023,13:00,56.7
+Ñuñoa,2023,14:00,56.4
+Ñuñoa,2023,15:00,55.7
+Ñuñoa,2023,16:00,55
+Ñuñoa,2023,17:00,54.9
+Ñuñoa,2023,18:00,55.4
+Ñuñoa,2023,19:00,55.3
+Ñuñoa,2023,20:00,54.2
+Ñuñoa,2023,21:00,52.8
+Ñuñoa,2023,22:00,51.6
+Ñuñoa,2023,23:00,49.8
+Ñuñoa,2024,00:00,47.8
+Ñuñoa,2024,01:00,46.4
+Ñuñoa,2024,02:00,44.6
+Ñuñoa,2024,03:00,45.6
+Ñuñoa,2024,04:00,47.6
+Ñuñoa,2024,05:00,48.6
+Ñuñoa,2024,06:00,48.2
+Ñuñoa,2024,07:00,55.1
+Ñuñoa,2024,08:00,55.8
+Ñuñoa,2024,09:00,55.5
+Ñuñoa,2024,10:00,55.7
+Ñuñoa,2024,11:00,55.8
+Ñuñoa,2024,12:00,55.5
+Ñuñoa,2024,13:00,55
+Ñuñoa,2024,14:00,54.6
+Ñuñoa,2024,15:00,54.8
+Ñuñoa,2024,16:00,55.3
+Ñuñoa,2024,17:00,55
+Ñuñoa,2024,18:00,55.3
+Ñuñoa,2024,19:00,55
+Ñuñoa,2024,20:00,55.3
+Ñuñoa,2024,21:00,53
+Ñuñoa,2024,22:00,51.7
+Ñuñoa,2024,23:00,49.4
+Ñuñoa,2025,00:00,47.5
+Ñuñoa,2025,01:00,45.9
+Ñuñoa,2025,02:00,45.6
+Ñuñoa,2025,03:00,45.5
+Ñuñoa,2025,04:00,45.5
+Ñuñoa,2025,05:00,46
+Ñuñoa,2025,06:00,49.2
+Ñuñoa,2025,07:00,54.9
+Ñuñoa,2025,08:00,55.5
+Ñuñoa,2025,09:00,54.9
+Ñuñoa,2025,10:00,54.9
+Ñuñoa,2025,11:00,55.7
+Ñuñoa,2025,12:00,55.4
+Ñuñoa,2025,13:00,55.6
+Ñuñoa,2025,14:00,55.4
+Ñuñoa,2025,15:00,55.5
+Ñuñoa,2025,16:00,55.1
+Ñuñoa,2025,17:00,54.7
+Ñuñoa,2025,18:00,54.8
+Ñuñoa,2025,19:00,54.8
+Ñuñoa,2025,20:00,54
+Ñuñoa,2025,21:00,52.8
+Ñuñoa,2025,22:00,52.9
+Ñuñoa,2025,23:00,49.3
+San Joaquín,2025,00:00,47.5
+San Joaquín,2025,01:00,45.9
+San Joaquín,2025,02:00,45.6
+San Joaquín,2025,03:00,45.5
+San Joaquín,2025,04:00,45.5
+San Joaquín,2025,05:00,46
+San Joaquín,2025,06:00,49.2
+San Joaquín,2025,07:00,54.9
+San Joaquín,2025,08:00,55.5
+San Joaquín,2025,09:00,54.9
+San Joaquín,2025,10:00,54.9
+San Joaquín,2025,11:00,55.7
+San Joaquín,2025,12:00,55.4
+San Joaquín,2025,13:00,55.6
+San Joaquín,2025,14:00,55.4
+San Joaquín,2025,15:00,55.5
+San Joaquín,2025,16:00,55.1
+San Joaquín,2025,17:00,54.7
+San Joaquín,2025,18:00,54.8
+San Joaquín,2025,19:00,54.8
+San Joaquín,2025,20:00,54
+San Joaquín,2025,21:00,52.8
+San Joaquín,2025,22:00,52.9
+San Joaquín,2025,23:00,49.3

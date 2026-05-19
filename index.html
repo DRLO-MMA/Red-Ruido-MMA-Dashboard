@@ -32,7 +32,6 @@
                 </div>
             </div>
             <button onclick="document.getElementById('cors-warning').remove()" class="text-xs font-semibold text-amber-900 hover:text-amber-950 bg-amber-200/50 hover:bg-amber-200 px-3 py-1.5 rounded-lg transition-colors">
-                Entendido
             </button>
         </div>
     </div>
@@ -62,15 +61,28 @@
 
         <!-- Botón de retorno rápido a la vista inicial -->
         <button id="btn-home" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 bg-emerald-600 text-white hover:bg-emerald-700 font-semibold text-sm rounded-xl shadow-sm transition-all cursor-pointer">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
-            Región Metropolitana
+            <span id="btn-home-label">Vista General</span>
         </button>
+
+        <!-- Botón de regiones disponibles -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+                <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Regiones</h2>
+                <div id="regions-list" class="space-y-2 max-h-[400px] overflow-y-auto pr-1">
+                    <!-- Se poblará dinámicamente con JavaScript -->
+                    <div class="animate-pulse flex space-y-2 flex-col">
+                        <div class="h-10 bg-slate-100 rounded-lg"></div>
+                        <div class="h-10 bg-slate-100 rounded-lg"></div>
+                        <div class="h-10 bg-slate-100 rounded-lg"></div>
+                    </div>
+                </div>
+            </div>
 
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
                 <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Estaciones de Monitoreo</h2>
-                <div id="stations-list" class="space-y-2 max-h-[400px] overflow-y-auto pr-1">
+                <div id="stations-list" class="space-y-2 max-h-[210px] overflow-y-auto pr-1">
                     <!-- Se poblará dinámicamente con JavaScript -->
                     <div class="animate-pulse flex space-y-2 flex-col">
                         <div class="h-10 bg-slate-100 rounded-lg"></div>
@@ -121,11 +133,12 @@
         // Variables globales de almacenamiento
         let annualData = [];
         let hourlyData = [];
+        let regions = [];
         let stations = [];
         let isUsingMockData = false;
 
         // Datos de simulación para desarrollo o cuando falla la carga local (CORS/File)
-        const MOCK_ANNUAL = "Estacion;Anio;Ruido_dB\r\nEST_1;2023;68,5\r\nEST_1;2024;69,1\r\nEST_2;2023;72,1\r\nEST_2;2024;71,5\r\nEST_3;2023;58,4\r\nEST_3;2024;59,1";
+        const MOCK_ANNUAL = "Region;Estacion;Anio;Ruido_dB\r\nREGION_1;EST_1;2023;68,5\r\nREGION_1;EST_1;2024;69,1\r\nREGION_1;EST_2;2023;72,1\r\nREGION_1;EST_2;2024;71,5\r\nREGION_2;EST_3;2023;58,4\r\nREGION_2;EST_3;2024;59,1";
 
         // Generador de perfil horario realista: curva baja de noche, pico en mañana y tarde
         function generateMockHourlyCSV() {
@@ -172,11 +185,11 @@
             // Intento de carga nativo desde el servidor web (Cloudflare Pages)
             try {
                 const [resAnnual, resHourly] = await Promise.all([
-                    fetch('DATA/datos_anuales_v6.csv').then(r => {
+                    fetch('DATA/datos_anuales.csv').then(r => {
                         if (!r.ok) throw new Error("No se encontró datos_anuales.csv");
                         return r.text();
                     }),
-                    fetch('DATA/perfiles_horarios_v6.csv').then(r => {
+                    fetch('DATA/perfiles_horarios.csv').then(r => {
                         if (!r.ok) throw new Error("No se encontró perfiles_horarios.csv");
                         return r.text();
                     })
@@ -215,34 +228,95 @@
             });
         }
 
+        // Región actualmente seleccionada
+        let activeRegion = null;
+
         // Procesar los datos cargados e inicializar vistas
         function processData(annualRaw, hourlyRaw) {
             annualData = parseCSV(annualRaw);
             hourlyData = parseCSV(hourlyRaw);
 
+            // Obtener lista única de regiones
+            // Las regiones quedaran segun el orden del CSV
+            regions = [...new Set(annualData.map(item => item.Region))];
+
             // Obtener lista única de estaciones
+            // Orden alfabatico
             stations = [...new Set(annualData.map(item => item.Estacion))].sort();
 
-            // Configurar botones e interfaces
-            renderStationList();
-            renderGlobalView();
+            // Seleccionar la primera región por defecto
+            activeRegion = regions[0] || null;
 
-            // Configurar acción del botón "Región Metropolitana"
+            // Actualizar la etiqueta del botón home con la primera región
+            if (activeRegion) {
+                document.getElementById('btn-home-label').innerText = activeRegion;
+            }
+
+            // Configurar acción del botón home: vuelve a la primera región
             document.getElementById('btn-home').onclick = () => {
-                renderGlobalView();
+                const firstRegion = regions[0] || null;
+                if (firstRegion) document.getElementById('btn-home-label').innerText = firstRegion;
+                selectRegion(firstRegion);
             };
+
+            // Configurar botones e interfaces
+            renderRegionList();
+            renderStationList(activeRegion);
+            renderGlobalView(activeRegion);
         }
 
-        // Dibujar el listado lateral de estaciones
-        function renderStationList() {
-            const container = document.getElementById('stations-list');
-            if (stations.length === 0) {
-                container.innerHTML = `<p class="text-xs text-red-500">No se detectaron estaciones en el CSV.</p>`;
+        // Seleccionar una región: actualiza lista de estaciones y vista global
+        function selectRegion(region) {
+            activeRegion = region;
+            renderRegionList();
+            renderStationList(region);
+            renderGlobalView(region);
+        }
+
+        // Dibujar el listado lateral de regiones con resaltado de la región activa
+        function renderRegionList() {
+            const container = document.getElementById('regions-list');
+            if (regions.length === 0) {
+                container.innerHTML = `<p class="text-xs text-red-500">No se detectaron regiones en el CSV.</p>`;
                 return;
             }
 
-            container.innerHTML = stations.map(station => `
-                <button onclick="renderStationView('${station}')" 
+            container.innerHTML = regions.map(region => {
+                const isActive = region === activeRegion;
+                const activeClasses = isActive
+                    ? 'bg-emerald-100 border-emerald-400 text-emerald-900 font-semibold'
+                    : 'bg-slate-50 hover:bg-emerald-50 hover:text-emerald-900 border-slate-200 hover:border-emerald-200 text-slate-700';
+                const arrowOpacity = isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100';
+                return `
+                <button onclick="selectRegion('${region}')"
+                        class="region-btn w-full text-left p-3 rounded-xl border ${activeClasses} text-sm font-medium transition-all flex items-center justify-between group cursor-pointer">
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <span class="truncate pr-2">${region}</span>
+                    <svg class="w-4 h-4 ${arrowOpacity} text-emerald-600 transition-opacity flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>`;
+            }).join('');
+        }
+
+        // Dibujar el listado lateral de estaciones, filtrado por región activa
+        function renderStationList(region) {
+            const container = document.getElementById('stations-list');
+
+            // Filtrar estaciones que pertenecen a la región seleccionada
+            const filteredStations = region
+                ? [...new Set(annualData.filter(item => item.Region === region).map(item => item.Estacion))].sort()
+                : stations;
+
+            if (filteredStations.length === 0) {
+                container.innerHTML = `<p class="text-xs text-red-500">No se encontraron estaciones para esta región.</p>`;
+                return;
+            }
+
+            container.innerHTML = filteredStations.map(station => `
+                <button onclick="renderStationView('${station}')"
                         class="station-btn w-full text-left p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200 hover:border-emerald-200 text-sm font-medium text-slate-700 transition-all flex items-center justify-between group cursor-pointer">
                     <span class="truncate pr-2">${station}</span>
                     <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 text-emerald-600 transition-opacity flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -252,11 +326,22 @@
             `).join('');
         }
 
-        // Dibujar gráfico de barra agrupado (Vista Inicial)
-        function renderGlobalView() {
+        // Dibujar gráfico de barra agrupado (Vista Regional)
+        function renderGlobalView(region) {
+            // Filtrar datos por región seleccionada
+            const regionData = region
+                ? annualData.filter(item => item.Region === region)
+                : annualData;
+
+            // Estaciones que pertenecen a la región
+            const regionStations = [...new Set(regionData.map(item => item.Estacion))].sort();
+
             // Actualizar etiquetas e interfaz
-            document.getElementById('chart-title').innerText = "Nivel de Ruido Anual";
-            document.getElementById('chart-subtitle').innerText = "Comparativa general por estación (2023 - 2026)";
+            document.getElementById('chart-title').innerText = region
+                ? `Nivel de Ruido Anual — ${region}`
+                : "Nivel de Ruido Anual";
+            document.getElementById('chart-subtitle').innerText =
+                `Comparativa por estación · ${regionStations.length} estación(es) · todos los años disponibles`;
             
             const badge = document.getElementById('active-badge');
             badge.innerText = "Vista Regional";
@@ -267,18 +352,18 @@
                 btn.classList.remove('bg-emerald-100', 'border-emerald-400', 'text-emerald-900', 'font-semibold');
             });
 
-            // Extraer años únicos disponibles en los datos
-            const years = [...new Set(annualData.map(item => item.Anio))].sort();
+            // Extraer años únicos disponibles en los datos filtrados
+            const years = [...new Set(regionData.map(item => item.Anio))].sort();
 
             // Construir trazas de barras para Plotly
             const traces = years.map(year => {
-                const noiseLevels = stations.map(station => {
-                    const found = annualData.find(item => item.Estacion === station && item.Anio === year);
+                const noiseLevels = regionStations.map(station => {
+                    const found = regionData.find(item => item.Estacion === station && item.Anio === year);
                     return found ? parseFloat(found.Ruido_dB) : null;
                 });
 
                 return {
-                    x: stations,
+                    x: regionStations,
                     y: noiseLevels,
                     name: `Año ${year}`,
                     type: 'bar',
@@ -380,10 +465,13 @@
                 // Noche 00–07
                 { type: 'rect', x0: '00:00', x1: '07:00', y0: 0, y1: 1, yref: 'paper',
                   fillcolor: 'rgba(30,58,138,0.04)', line: { width: 0 } },
-                // Mañana-tarde 06–20
+                // Dia 07–21
                 { type: 'rect', x0: '07:00', x1: '21:00', y0: 0, y1: 1, yref: 'paper',
                   fillcolor: 'rgba(251,191,36,0.05)', line: { width: 0 } },
-                // Noche 22–23
+                // Tarde 21–22
+                { type: 'rect', x0: '21:00', x1: '22:00', y0: 0, y1: 1, yref: 'paper',
+                  fillcolor: 'rgba(255,215,0,0.2)', line: { width: 0 } },
+                  // Noche 22–23
                 { type: 'rect', x0: '22:00', x1: '23:00', y0: 0, y1: 1, yref: 'paper',
                   fillcolor: 'rgba(30,58,138,0.04)', line: { width: 0 } },
             ];
@@ -392,10 +480,12 @@
             const annotations = [
                 { x: '03:00', y: 1, yref: 'paper', text: '🌙 Noche', showarrow: false,
                   font: { size: 10, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' },
-                { x: '13:00', y: 1, yref: 'paper', text: '☀️ Diurno', showarrow: false,
+                { x: '12:00', y: 1, yref: 'paper', text: '☀️ Día', showarrow: false,
                   font: { size: 10, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' },
-                { x: '22:00', y: 1, yref: 'paper', text: '🌙 Noche', showarrow: false,
+                { x: '22:00', y: 1, yref: 'paper', text: '🌇 Tarde', showarrow: false,
                   font: { size: 10, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' },
+                // { x: '22:00', y: 1, yref: 'paper', text: '🌙 Noche', showarrow: false,
+                //   font: { size: 10, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' },
             ];
 
             const layout = {
