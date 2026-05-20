@@ -97,7 +97,7 @@
                 <h3 class="text-xs font-bold text-slate-600 uppercase mb-2">💡 Importante</h3>
                 <p class="text-xs text-slate-500 leading-relaxed">
                     Datos previo, no validados.<br/>
-                    <a href="http://ruido.mma.gob.cl">Descarga aqui</a>.
+                    <a href="http://ruido.mma.gob.cl" target="_blank">Descarga aqui</a>.
                 </p>
             </div>
         </aside>
@@ -248,14 +248,14 @@
             activeRegion = regions[0] || null;
 
             // Actualizar la etiqueta del botón home con la primera región
-            if (activeRegion) {
-                document.getElementById('btn-home-label').innerText = activeRegion;
-            }
+            // if (activeRegion) {
+            //     document.getElementById('btn-home-label').innerText = activeRegion;
+            // }
 
             // Configurar acción del botón home: vuelve a la primera región
             document.getElementById('btn-home').onclick = () => {
                 const firstRegion = regions[0] || null;
-                if (firstRegion) document.getElementById('btn-home-label').innerText = firstRegion;
+                //if (firstRegion) document.getElementById('btn-home-label').innerText = firstRegion;
                 selectRegion(firstRegion);
             };
 
