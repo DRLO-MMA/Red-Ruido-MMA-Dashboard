@@ -317,7 +317,8 @@ function renderStationView(stationName) {
     shapes,
     annotations,
     xaxis: { title: 'Hora del día', categoryorder: 'array', categoryarray: ALL_HOURS, tickangle: -90, tickfont: { size: 10 }, gridcolor: '#f1f5f9', showline: true, linecolor: '#e2e8f0' },
-    yaxis: { title: 'Nivel de Ruido, dBA', gridcolor: '#e2e8f0', zeroline: false, range: [Math.max(30, minY), Math.min(100, maxY)] },
+    //yaxis: { title: 'Nivel de Ruido, dBA', gridcolor: '#e2e8f0', zeroline: false, range: [Math.max(30, minY), Math.min(100, maxY)] },
+    yaxis: { title: 'Nivel de Ruido, dBA', gridcolor: '#e2e8f0', zeroline: false, range: [40, 80] },
     paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)', hovermode: 'x unified', legend: { orientation: 'h', y: -0.2 }
   };
 
@@ -449,7 +450,7 @@ function renderChart(){
 
   const yAxis = document.getElementById('y-axis');
   yAxis.innerHTML = '';
-  const steps = [80,70,60,50,40];
+  const steps = [80,70,60,50,45,40,35];
   steps.forEach(v=>{ const l = document.createElement('div'); l.className='y-label'; l.textContent=v; yAxis.appendChild(l); });
 
   visible.forEach(s=>{
