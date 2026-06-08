@@ -1,81 +1,81 @@
-Region;Estacion;Anio;Ruido_dB
-Gran Santiago;Alameda;2023;75.1
-Gran Santiago;Alameda;2024;74.8
-Gran Santiago;Alameda;2025;74.8
-Gran Santiago;Alameda;2026;74.1
-Gran Santiago;San Miguel;2023;67.7
-Gran Santiago;San Miguel;2024;67
-Gran Santiago;San Miguel;2025;66.6
-Gran Santiago;San Miguel;2026;66.1
-Concepción;Concepción Barrio Norte;2023;63.8
-Concepción;Concepción Barrio Norte;2024;62.6
-Concepción;Concepción Barrio Norte;2025;62.1
-Concepción;Concepción Barrio Norte;2026;60.2
-Gran Santiago;Independencia;2023;57
-Gran Santiago;Independencia;2024;55.5
-Gran Santiago;Independencia;2025;56.8
-Gran Santiago;Independencia;2026;55.1
-Gran Santiago;Autopista Central;2023;79
-Gran Santiago;Autopista Central;2024;78.9
-Gran Santiago;Autopista Central;2025;78.8
-Gran Santiago;Autopista Central;2026;78.9
-Gran Santiago;Ñuñoa;2023;56.7
-Gran Santiago;Ñuñoa;2024;56.4
-Gran Santiago;Ñuñoa;2025;56.1
-Gran Santiago;Ñuñoa;2026;55.3
-Valparaíso / Viña del Mar;Alvarez Viña del Mar;2023;73.4
-Valparaíso / Viña del Mar;Alvarez Viña del Mar;2024;73.3
-Valparaíso / Viña del Mar;Alvarez Viña del Mar;2025;73.6
-Valparaíso / Viña del Mar;Alvarez Viña del Mar;2026;73.7
-Valparaíso / Viña del Mar;Playa Ancha;2023;68.4
-Valparaíso / Viña del Mar;Playa Ancha;2024;67.6
-Valparaíso / Viña del Mar;Playa Ancha;2025;68.1
-Valparaíso / Viña del Mar;Playa Ancha;2026;67.9
-Concepción;CIAM Concepción;2023;68.5
-Concepción;CIAM Concepción;2024;68.2
-Concepción;CIAM Concepción;2025;69.9
-Concepción;CIAM Concepción;2026;68.1
-Gran Santiago;Las Condes;2023;68.8
-Gran Santiago;Las Condes;2024;68.3
-Gran Santiago;Las Condes;2025;68.1
-Gran Santiago;Las Condes;2026;67.3
-Valparaíso / Viña del Mar;Valparaíso;2023;68.1
-Valparaíso / Viña del Mar;Valparaíso;2024;68
-Valparaíso / Viña del Mar;Valparaíso;2025;68.1
-Valparaíso / Viña del Mar;Valparaíso;2026;67.3
-Valparaíso / Viña del Mar;Viña del Mar;2023;70
-Valparaíso / Viña del Mar;Viña del Mar;2024;69.9
-Valparaíso / Viña del Mar;Viña del Mar;2025;70.1
-Valparaíso / Viña del Mar;Viña del Mar;2026;70.2
-Gran Santiago;La Florida;2023;68.4
-Gran Santiago;La Florida;2024;68
-Gran Santiago;La Florida;2025;67.9
-Gran Santiago;La Florida;2026;67.2
-Gran Santiago;Providencia;2023;64.6
-Gran Santiago;Providencia;2024;64.4
-Gran Santiago;Providencia;2025;63.8
-Gran Santiago;Providencia;2026;63.3
-Gran Santiago;Cerro Navia;2023;59.2
-Gran Santiago;Cerro Navia;2024;58.5
-Gran Santiago;Cerro Navia;2025;58.7
-Gran Santiago;Cerro Navia;2026;58.7
-Gran Santiago;El Bosque;2023;65.6
-Gran Santiago;El Bosque;2024;66.2
-Gran Santiago;El Bosque;2025;66.3
-Gran Santiago;El Bosque;2026;66.1
-Gran Santiago;Puente Alto;2023;70.5
-Gran Santiago;Puente Alto;2024;70.4
-Gran Santiago;Puente Alto;2025;70
-Concepción;INFOCAP Concepción;2023;75.6
-Concepción;INFOCAP Concepción;2024;75
-Concepción;INFOCAP Concepción;2025;75.1
-Concepción;INFOCAP Concepción;2026;74.5
-Concepción;San Pedro de La Paz;2024;75.6
-Concepción;San Pedro de La Paz;2025;75.6
-Concepción;San Pedro de La Paz;2026;75.4
-Gran Santiago;San Bernardo;2023;71.9
-Gran Santiago;San Bernardo;2024;71.9
-Gran Santiago;San Bernardo;2025;71.9
-Gran Santiago;San Bernardo;2026;72
-Gran Santiago;San Joaquín;2025;72.1
-Gran Santiago;San Joaquín;2026;71.4
+Region;Estacion;Anio;Ruido_dB;n_serie
+Gran Santiago;Alameda;2023;75.1;00623
+Gran Santiago;Alameda;2024;74.8;00623
+Gran Santiago;Alameda;2025;74.8;00623
+Gran Santiago;Alameda;2026;74.1;00623
+Gran Santiago;San Miguel;2023;67.7;00628
+Gran Santiago;San Miguel;2024;67;00628
+Gran Santiago;San Miguel;2025;66.6;00628
+Gran Santiago;San Miguel;2026;66.1;00628
+Concepción;Concepción Barrio Norte;2023;63.8;00623
+Concepción;Concepción Barrio Norte;2024;62.6;00623
+Concepción;Concepción Barrio Norte;2025;62.1;00623
+Concepción;Concepción Barrio Norte;2026;60.2;00623
+Gran Santiago;Independencia;2023;57;00623
+Gran Santiago;Independencia;2024;55.5;00623
+Gran Santiago;Independencia;2025;56.8;00623
+Gran Santiago;Independencia;2026;55.1;00623
+Gran Santiago;Autopista Central;2023;79;00623
+Gran Santiago;Autopista Central;2024;78.9;00623
+Gran Santiago;Autopista Central;2025;78.8;00623
+Gran Santiago;Autopista Central;2026;78.9;00623
+Gran Santiago;Ñuñoa;2023;56.7;00623
+Gran Santiago;Ñuñoa;2024;56.4;00623
+Gran Santiago;Ñuñoa;2025;56.1;00623
+Gran Santiago;Ñuñoa;2026;55.3;00623
+Valparaíso / Viña del Mar;Alvarez Viña del Mar;2023;73.4;00623
+Valparaíso / Viña del Mar;Alvarez Viña del Mar;2024;73.3;00623
+Valparaíso / Viña del Mar;Alvarez Viña del Mar;2025;73.6;00623
+Valparaíso / Viña del Mar;Alvarez Viña del Mar;2026;73.7;00623
+Valparaíso / Viña del Mar;Playa Ancha;2023;68.4;00623
+Valparaíso / Viña del Mar;Playa Ancha;2024;67.6;00623
+Valparaíso / Viña del Mar;Playa Ancha;2025;68.1;00623
+Valparaíso / Viña del Mar;Playa Ancha;2026;67.9;00623
+Concepción;CIAM Concepción;2023;68.5;00623
+Concepción;CIAM Concepción;2024;68.2;00623
+Concepción;CIAM Concepción;2025;69.9;00623
+Concepción;CIAM Concepción;2026;68.1;00623
+Gran Santiago;Las Condes;2023;68.8;00623
+Gran Santiago;Las Condes;2024;68.3;00623
+Gran Santiago;Las Condes;2025;68.1;00623
+Gran Santiago;Las Condes;2026;67.3;00623
+Valparaíso / Viña del Mar;Valparaíso;2023;68.1;00623
+Valparaíso / Viña del Mar;Valparaíso;2024;68;00623
+Valparaíso / Viña del Mar;Valparaíso;2025;68.1;00623
+Valparaíso / Viña del Mar;Valparaíso;2026;67.3;00623
+Valparaíso / Viña del Mar;Viña del Mar;2023;70;00623
+Valparaíso / Viña del Mar;Viña del Mar;2024;69.9;00623
+Valparaíso / Viña del Mar;Viña del Mar;2025;70.1;00623
+Valparaíso / Viña del Mar;Viña del Mar;2026;70.2;00623
+Gran Santiago;La Florida;2023;68.4;00623
+Gran Santiago;La Florida;2024;68;00623
+Gran Santiago;La Florida;2025;67.9;00623
+Gran Santiago;La Florida;2026;67.2;00623
+Gran Santiago;Providencia;2023;64.6;00623
+Gran Santiago;Providencia;2024;64.4;00623
+Gran Santiago;Providencia;2025;63.8;00623
+Gran Santiago;Providencia;2026;63.3;00623
+Gran Santiago;Cerro Navia;2023;59.2;00623
+Gran Santiago;Cerro Navia;2024;58.5;00623
+Gran Santiago;Cerro Navia;2025;58.7;00623
+Gran Santiago;Cerro Navia;2026;58.7;00623
+Gran Santiago;El Bosque;2023;65.6;00623
+Gran Santiago;El Bosque;2024;66.2;00623
+Gran Santiago;El Bosque;2025;66.3;00623
+Gran Santiago;El Bosque;2026;66.1;00623
+Gran Santiago;Puente Alto;2023;70.5;00623
+Gran Santiago;Puente Alto;2024;70.4;00623
+Gran Santiago;Puente Alto;2025;70;00623
+Concepción;INFOCAP Concepción;2023;75.6;00623
+Concepción;INFOCAP Concepción;2024;75;00623
+Concepción;INFOCAP Concepción;2025;75.1;00623
+Concepción;INFOCAP Concepción;2026;74.5;00623
+Concepción;San Pedro de La Paz;2024;75.6;00623
+Concepción;San Pedro de La Paz;2025;75.6;00623
+Concepción;San Pedro de La Paz;2026;75.4;00623
+Gran Santiago;San Bernardo;2023;71.9;00623
+Gran Santiago;San Bernardo;2024;71.9;00623
+Gran Santiago;San Bernardo;2025;71.9;00623
+Gran Santiago;San Bernardo;2026;72;00623
+Gran Santiago;San Joaquín;2025;72.1;00623
+Gran Santiago;San Joaquín;2026;71.4;00623

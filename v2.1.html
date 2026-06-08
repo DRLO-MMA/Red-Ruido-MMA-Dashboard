@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Monitoreo de Ruido Ambiental</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="p-2 bg-[#f5f4ee] rounded-xl min-h-[600px]">
+
+    <!-- Encabezado -->
+    <div class="flex justify-between items-start mb-2">
+      <div>
+        <h2 class="text-[17px] font-semibold text-gray-800 mb-0.5">Red de Monitoreo de Ruido Ambiental</h2>
+        <p class="text-[15px] font-semibold text-gray-800">Ministerio del Medio Ambiente</p>
+      </div>
+      <div class="text-right">
+        <p class="text-[13px] font-semibold text-gray-800 leading-relaxed">
+          Sección Ruido<br>Departamento de Ruido, Lumínica y Olores
+        </p>
+      </div>
+    </div>
+
+    <!-- Botones de Región -->
+    <div id="regions" class="flex flex-wrap gap-2.5 mb-2"></div>
+
+    <!-- Botones de Estación -->
+    <div id="stations" class="grid grid-cols-7 gap-1 mb-2 min-h-[100px]"></div>
+
+    <!-- Pestañas -->
+    <div class="flex pt-2">
+      <button class="tab-btn px-4 py-1 text-[12px] font-medium rounded-t-md mr-1 bg-[#2c2c2a] text-white" data-tab="ruido">
+        Nivel de Ruido
+      </button>
+      <button class="tab-btn px-4 py-1 text-[12px] font-medium rounded-t-md mr-1 bg-[#d1cfc6] text-[#5f5e5a] hover:bg-[#b4b2a9] transition-colors" data-tab="horario">
+        Perfil Horario
+      </button>
+      <button class="tab-btn px-4 py-1 text-[12px] font-medium rounded-t-md mr-1 bg-[#d1cfc6] text-[#5f5e5a] hover:bg-[#b4b2a9] transition-colors" data-tab="tiempo-real">
+        Tiempo Real
+      </button>
+    </div>
+
+    <!-- Área de gráficos -->
+    <div class="bg-[#fff] p-2">
+      <div id="tab-ruido" class="tab-content block">
+        <div id="ruido-chart" style="width:100%; height:350px;"></div>
+      </div>
+      <div id="tab-horario" class="tab-content hidden">
+        <div class="flex items-center justify-center h-[200px] text-sm text-gray-400">
+          Perfil Horario - selecciona una estación para ver su tendencia
+        </div>
+      </div>
+      <div id="tab-tiempo-real" class="tab-content hidden">
+        <div class="flex items-center justify-center h-[200px] text-sm text-gray-400">
+          Seleccione una estación
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    /* ─── Configuración ───────────────────────────────────────── */
+    const ANNUAL_URL = 'DATA/datos_anuales.csv';
+    const HOURLY_URL = 'DATA/perfiles_horarios.csv';
+    const REALTIME_URL_PREFIX = 'DATA/realtime_';
+    const REALTIME_URL_SUFFIX = '.csv';
+
+    const COLORS = [
+      '#6b8fd8','#a78bd4','#e8a040','#d4c240','#e84080',
+      '#d440a0','#40c8c8','#40b878','#78b840','#8a8a20',
+      '#c87a18','#e8a080','#DE4AD5','#38B5BC','#FAE5F9',
+      '#A71E9F','#D576A0','#6ED874','#305B91'
+    ];
+    const YEAR_COLORS = ['#00429d','#3e67ae','#618fbf','#85b7ce','#b1dfdb','#ffffe0'];
+
+    /* ─── Estado ──────────────────────────────────────────────── */
+    let annualData  = [];
+    let hourlyData  = [];
+    let regions     = [];
+    let stationMeta = [];   // [{ id, val, color }]
+    let activeRegion   = null;
+    let activeStations = new Set();
+    let activeStation  = null;
+
+    /* ─── CSV ─────────────────────────────────────────────────── */
+    function parseCSV(text) {
+      const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      if (!lines.length) return [];
+
+      const sep = lines[0].includes(';') ? ';' : ',';
+      const headers = lines[0].split(sep).map(h => h.trim());
+
+      return lines.slice(1).map(line => {
+        const values = line.split(sep).map(v => v.trim());
+        return headers.reduce((acc, header, i) => {
+          let value = values[i] || '';
+          if (/^\d+,\d+$/.test(value)) value = value.replace(',', '.');
+          acc[header] = value;
+          return acc;
+        }, {});
+      });
+    }
+
+    /* ─── Datos mock ──────────────────────────────────────────── */
+    function generateMockAnnualCSV() {
+      const mockRegions  = ['REGION_1', 'REGION_2', 'REGION_3'];
+      const mockStations = ['E1', 'E2', 'E3', 'E4', 'E5', 'E6'];
+      const years        = [2023, 2024];
+      const rows         = ['Region;Estacion;Anio;Ruido_dB'];
+
+      mockRegions.forEach((r, ri) => {
+        mockStations.forEach((s, si) => {
+          years.forEach(y => {
+            const base = 50 + si * 3 + ri * 2;
+            const val  = (base + (y - 2023) + (Math.random() * 4 - 2)).toFixed(1).replace('.', ',');
+            rows.push(`${r};${s};${y};${val}`);
+          });
+        });
+      });
+
+      return rows.join('\r\n');
+    }
+
+    function generateMockHourlyCSV() {
+      const mockStations = ['E1', 'E2', 'E3', 'E4', 'E5', 'E6'];
+      const years        = [2023, 2024, 2025];
+      const hours        = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, '0') + ':00');
+      const rows         = ['Estacion;Anio;Hora;Ruido_dB'];
+
+      mockStations.forEach((st, si) => {
+        years.forEach(year => {
+          hours.forEach(hora => {
+            const h    = parseInt(hora);
+            const base = 45 + si * 2;
+            const curve = base
+              + 10 * Math.exp(-0.5 * Math.pow((h - 8)  / 3, 2))
+              +  8 * Math.exp(-0.5 * Math.pow((h - 18) / 2, 2));
+            const val = (curve + (Math.random() - 0.5) * 2).toFixed(1).replace('.', ',');
+            rows.push(`${st};${year};${hora};${val}`);
+          });
+        });
+      });
+
+      return rows.join('\r\n');
+    }
+
+    /* ─── Carga de datos ──────────────────────────────────────── */
+    async function loadData() {
+      if (window.location.protocol === 'file:') {
+        processData(generateMockAnnualCSV(), generateMockHourlyCSV());
+        return;
+      }
+      try {
+        const [aRes, hRes] = await Promise.all([
+          fetch(ANNUAL_URL).then(r => { if (!r.ok) throw new Error('Datos anuales no encontrados'); return r.text(); }),
+          fetch(HOURLY_URL).then(r => { if (!r.ok) throw new Error('Datos por hora no encontrados'); return r.text(); })
+        ]);
+        processData(aRes, hRes);
+      } catch (err) {
+        console.warn('Fallo fetch CSV, usando datos mock:', err);
+        processData(generateMockAnnualCSV(), generateMockHourlyCSV());
+      }
+    }
+
+    function processData(annualRaw, hourlyRaw) {
+      annualData  = parseCSV(annualRaw);
+      hourlyData  = parseCSV(hourlyRaw);
+      regions     = [...new Set(annualData.map(d => d.Region))];
+      activeRegion = regions[0] || null;
+      renderRegions();
+      renderStationsForRegion(activeRegion);
+      renderChart();
+    }
+
+    /* ─── Render: regiones ────────────────────────────────────── */
+    function renderRegions() {
+      const container = document.getElementById('regions');
+      container.innerHTML = '';
+
+      if (!regions.length) {
+        container.innerHTML = '<div class="px-2 py-2 rounded-lg text-[#3b6d11] text-[15px] font-medium">Error, prueba en otro momento (NOREG)</div>';
+        return;
+      }
+
+      regions.forEach(region => {
+        const isActive = region === activeRegion;
+        const btn = document.createElement('button');
+        btn.className = [
+          'region-btn px-5 py-2 rounded-lg border-2 text-[12px] font-medium cursor-pointer transition-all',
+          isActive
+            ? 'bg-[#26b6a2] text-white border-[#26b6a2]'
+            : 'bg-transparent text-[#000000] border-[#26b6a2] hover:bg-[#26b6a2]'
+        ].join(' ');
+        btn.textContent = region;
+        btn.dataset.r   = region;
+
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.region-btn').forEach(x => {
+            x.className = x.className
+              .replace(/bg-\[#26b6a2\]|text-white|border-\[#26b6a2\]/g, '')
+              .trim();
+            x.classList.add('bg-transparent', 'text-[#000000]', 'border-[#26b6a2]', 'hover:bg-[#26b6a2]');
+          });
+          btn.classList.remove('bg-transparent', 'text-[#000000]', 'border-[#26b6a2]', 'hover:bg-[#26b6a2]');
+          btn.classList.add('bg-[#26b6a2]', 'text-white', 'border-[#26b6a2]');
+
+          activeRegion  = region;
+          activeStation = null;
+          renderStationsForRegion(region);
+          switchTab('ruido');
+          renderChart();
+        });
+
+        container.appendChild(btn);
+      });
+    }
+
+    /* ─── Render: estaciones ──────────────────────────────────── */
+    function renderStationsForRegion(region) {
+      const container = document.getElementById('stations');
+      container.innerHTML = '';
+
+      const filtered = region ? annualData.filter(d => d.Region === region) : annualData;
+      const uniq     = [...new Set(filtered.map(d => d.Estacion))].sort();
+
+      stationMeta = uniq.map((id, i) => {
+        const rows  = filtered.filter(r => r.Estacion === id);
+        const years = rows.map(r => Number(r.Anio || 0)).filter(Boolean);
+        let val     = null;
+        if (years.length) {
+          const maxY  = Math.max(...years);
+          const found = rows.find(r => Number(r.Anio) === maxY);
+          val = found ? parseFloat((found.Ruido_dB || '0').toString().replace(',', '.')) : null;
+        }
+        return { id, val: val === null ? 50 : Math.round(val || 50), color: COLORS[i % COLORS.length] };
+      });
+
+      activeStations = new Set(stationMeta.map(s => s.id));
+
+      stationMeta.forEach(s => {
+        const btn = document.createElement('button');
+        btn.className = 'station-btn px-1 py-1 h-[48px] rounded-lg border-2 border-[#26b6a2] text-black text-[9px] md:text-[12px] font-normal overflow-hidden text-ellipsis cursor-pointer transition-all text-center hover:bg-[#26b6a2] hover:border-[#26b6a2]';
+        btn.textContent = s.id;
+        btn.dataset.sid = s.id;
+
+        btn.addEventListener('click', () => {
+          activeStation  = s.id;
+          activeStations = new Set([s.id]);
+          //Le saca a los demas
+          document.querySelectorAll('.station-btn').forEach(b => {
+            b.classList.remove('text-white', 'bg-[#26b6a2]');
+            b.classList.add('text-black');
+          });
+          // Le agrega al actual
+          btn.classList.remove('text-black');
+          btn.classList.add('text-white', 'bg-[#26b6a2]');
+          renderChart();
+          renderStationView(s.id);
+
+          // Update tiempo real tab if active
+          const activeTabBtn = document.querySelector('.tab-btn.bg-[#2c2c2a].text-white');
+          if (activeTabBtn && activeTabBtn.dataset.tab === 'tiempo-real') {
+            loadAndDisplayRealtimeData(s.id);
+          }
+        });
+
+        container.appendChild(btn);
+      });
+    }
+
+    /* ─── Pestañas ────────────────────────────────────────────── */
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        const isTarget = b.dataset.tab === tabName;
+        b.className = [
+          'tab-btn px-4 py-1 text-[12px] font-medium rounded-t-md mr-1 transition-colors',
+          isTarget ? 'bg-[#2c2c2a] text-white' : 'bg-[#d1cfc6] text-[#5f5e5a] hover:bg-[#b4b2a9]'
+        ].join(' ');
+      });
+      document.querySelectorAll('.tab-content').forEach(c => {
+        c.classList.toggle('hidden', !c.id.endsWith(tabName));
+        c.classList.toggle('block',   c.id.endsWith(tabName));
+      });
+
+      // Handle tab-specific logic
+      if (tabName === 'tiempo-real') {
+        if (activeStation) {
+          loadAndDisplayRealtimeData(activeStation);
+        } else {
+          // Show message to select a station
+          document.getElementById('tab-tiempo-real').innerHTML =
+            '<div class="flex items-center justify-center h-[200px] text-sm text-gray-400">Seleccione una estación</div>';
+        }
+      }
+    }
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        switchTab(btn.dataset.tab);
+        if (btn.dataset.tab === 'horario') {
+          if (activeStation) {
+            renderStationView(activeStation);
+          } else if (activeRegion) {
+            renderRegionHourly(activeRegion);
+          } else {
+            document.getElementById('tab-horario').innerHTML =
+              '<div class="flex items-center justify-center h-[200px] text-sm text-gray-400">Perfil Horario - selecciona una estación o región</div>';
+          }
+        }
+      });
+    });
+
+    /* ─── Gráfico: nivel de ruido ─────────────────────────────── */
+    function renderChart() {
+      if (activeStation) {
+        // Vista individual: barras por año para la estación seleccionada
+        const rows  = annualData.filter(d => d.Estacion === activeStation);
+        const years = [...new Set(rows.map(r => r.Anio))].sort();
+        if (!years.length) return;
+
+        const values = years.map(y => {
+          const found = rows.find(r => r.Anio === y);
+          return found ? parseFloat((found.Ruido_dB || '0').toString().replace(',', '.')) : null;
+        });
+
+        const trace = {
+          x: years,
+          y: values,
+          type: 'bar',
+          marker: { color: years.map((_, i) => COLORS[i % COLORS.length]), line: { width: 0 } },
+          text: values.map(v => v !== null ? v.toFixed(1) + ' dBA' : ''),
+          textposition: 'outside',
+          textfont: {size: 10},
+          hovertemplate: '<b>%{x}</b><extra></extra>'
+        };
+
+        const layout = {
+          title: {
+            text: `Nivel de ruido anual<br>${activeStation}`,
+            font: {
+              size: 14,
+              weight: 200
+            },
+            x: 0.5
+          },
+          margin: { t: 50, r: 20, l: 55, b: 50 },
+          autosize: true,
+          xaxis: {
+            title:{
+              text: 'Año',
+              font: { size: 10 }
+            },
+            type: 'category',
+            tickfont: { size: 9 },
+            gridcolor: '#f1f5f9',
+            showline: true,
+            linecolor: '#e2e8f0'
+          },
+          yaxis: {
+            title:{
+              text: 'Nivel de Ruido, dBA',
+              font: { size: 10 }
+            },
+            range: [40, 85],
+            gridcolor: '#e8e8e4',
+            zeroline: false,
+            ticksuffix: '',
+            tickfont: { size: 9 },
+          },
+          paper_bgcolor: 'rgba(0,0,0,0)',
+          plot_bgcolor:  'rgba(0,0,0,0)',
+          showlegend: false
+        };
+
+        Plotly.newPlot('ruido-chart', [trace], layout, { responsive: true, displayModeBar: false });
+        return;
+      }
+
+      // Vista regional: una barra por estación
+      const visible = stationMeta.filter(s => activeStations.has(s.id));
+      if (!visible.length) return;
+
+      const trace = {
+        x: visible.map(s => s.id),
+        y: visible.map(s => s.val),
+        type: 'bar',
+        marker: {
+          color: visible.map(s => s.color), line: { width: 0 } },
+        text: visible.map(s => s.val + ' dBA'),
+        textposition: 'outside',
+        textfont: {size: 10},
+        hovertemplate: '<b>%{x}</b><extra></extra>'
+      };
+
+      const layout = {
+        title: {
+          text: `${activeRegion || 'Todas las regiones'}`,
+          font: {
+            size: 12,
+            weight: 200
+          },
+          x: 0.5
+        },
+        margin: {
+          t: 50,
+          r: 20,
+          l: 55,
+          b: 50
+        },
+        autosize: true,
+        xaxis: {
+          title:{
+            text: 'Estación',
+            font: { size: 10 }
+          },
+          type: 'category',
+          tickfont: { size: 9 },
+          gridcolor: '#f1f5f9',
+          showline: true,
+          linecolor: '#e2e8f0',
+          tickangle: 20,
+        },
+        yaxis: {
+          title:{
+            text: 'Nivel de ruido Dia-Tarde-Noche, dBA',
+            font: { size: 10 }
+          },
+          range: [40, 85],
+          gridcolor: '#e8e8e4',
+          zeroline: false,
+          ticksuffix: '',
+          tickfont: { size: 9 },
+        },
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor:  'rgba(0,0,0,0)',
+        showlegend: false
+      };
+
+      Plotly.newPlot('ruido-chart', [trace], layout, { responsive: true, displayModeBar: false });
+    }
+
+    /* ─── Gráfico: perfil horario — estación ─────────────────── */
+    function renderStationView(stationName) {
+      const el = document.getElementById('tab-horario');
+      el.innerHTML = `
+        <div class="flex flex-col gap-1.5">
+          <h3 class="text-[15px] font-semibold text-gray-800">Perfil Horario: ${stationName}</h3>
+          <p class="text-[13px] text-gray-500">Nivel de ruido promedio hora a hora · todos los años disponibles</p>
+          <div id="hourly-chart" class="w-full mt-1.5" style="height:320px;"></div>
+        </div>
+      `;
+
+      const stationHourlyData = hourlyData.filter(d => d.Estacion === stationName);
+      const years    = [...new Set(stationHourlyData.map(d => d.Anio))].sort();
+      const ALL_HOURS = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, '0') + ':00');
+
+      const traces = years.map((year, idx) => {
+        const yearData = stationHourlyData.filter(d => d.Anio === year);
+        const yValues  = ALL_HOURS.map(hora => {
+          const found = yearData.find(d => d.Hora === hora);
+          return found ? parseFloat(found.Ruido_dB) : null;
+        });
+        const color = YEAR_COLORS[idx % YEAR_COLORS.length] || COLORS[idx % COLORS.length];
+        return {
+          x: ALL_HOURS, y: yValues, name: `${year}`,
+          type: 'scatter', mode: 'lines+markers', connectgaps: false,
+          line: { shape: 'line', width: 1.5, color },
+          marker: { size: 3, color, symbol: 'circle' },
+          hovertemplate: `<b>${year}</b>: %{y:.1f} dBA<extra></extra>`
+        };
+      });
+
+      Plotly.newPlot('hourly-chart', traces, buildHourlyLayout(), { responsive: true, displayModeBar: false });
+    }
+
+    /* ─── Gráfico: perfil horario — región ───────────────────── */
+    function renderRegionHourly(regionName) {
+      const el = document.getElementById('tab-horario');
+      el.innerHTML = `
+        <div class="flex flex-col gap-1.5">
+          <h3 class="text-[15px] font-semibold text-gray-800">Perfil Horario: ${regionName}</h3>
+          <p class="text-[13px] text-gray-500">Nivel de ruido promedio hora a hora · último año disponible</p>
+          <div id="hourly-chart" class="w-full mt-1.5" style="height:320px;"></div>
+        </div>
+      `;
+
+      const regionStations = [...new Set(
+        annualData.filter(d => d.Region === regionName).map(d => d.Estacion)
+      )];
+      const years = [...new Set(
+        hourlyData.filter(d => regionStations.includes(d.Estacion)).map(d => Number(d.Anio))
+      )].sort();
+
+      if (!years.length) {
+        document.getElementById('hourly-chart').innerHTML =
+          '<div class="flex items-center justify-center h-[200px] text-sm text-gray-400">No hay datos horarios para esta región.</div>';
+        return;
+      }
+
+      const lastYear  = years[years.length - 1];
+      const ALL_HOURS = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, '0') + ':00');
+
+      const traces = regionStations.map((st, idx) => {
+        const stationData = hourlyData.filter(d => d.Estacion === st && Number(d.Anio) === lastYear);
+        const yValues     = ALL_HOURS.map(hour => {
+          const found = stationData.find(d => d.Hora === hour);
+          return found ? parseFloat(found.Ruido_dB) : null;
+        });
+        const color = COLORS[idx % COLORS.length];
+        return {
+          x: ALL_HOURS,
+          y: yValues,
+          name: st,
+          type: 'scatter',
+          mode: 'lines+markers',
+          connectgaps: false,
+          line: {
+            shape: 'line',
+            width: 1.5,
+            color
+          },
+          marker: {
+            size: 3,
+            color
+          },
+          hovertemplate: `<b>${st}</b> %{y:.1f} dBA<extra></extra>`
+        };
+      });
+
+      Plotly.newPlot('hourly-chart', traces, buildHourlyLayout(), { responsive: true, displayModeBar: false });
+    }
+
+    /* ─── Layout compartido para gráficos horarios ────────────── */
+    function buildHourlyLayout() {
+      const ALL_HOURS = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, '0') + ':00');
+      return {
+        margin: { t: 20, r: 20, l: 50, b: 60 },
+        autosize: true,
+        shapes: [
+          { type: 'rect', x0: '00:00', x1: '07:00', y0: 0, y1: 1, yref: 'paper', fillcolor: 'rgba(30,58,138,0.04)',  line: { width: 0 } },
+          { type: 'rect', x0: '07:00', x1: '21:00', y0: 0, y1: 1, yref: 'paper', fillcolor: 'rgba(251,191,36,0.05)', line: { width: 0 } },
+          { type: 'rect', x0: '21:00', x1: '22:00', y0: 0, y1: 1, yref: 'paper', fillcolor: 'rgba(255,215,0,0.2)',   line: { width: 0 } },
+          { type: 'rect', x0: '22:00', x1: '23:00', y0: 0, y1: 1, yref: 'paper', fillcolor: 'rgba(30,58,138,0.04)', line: { width: 0 } }
+        ],
+        annotations: [
+          { x: '03:00', y: 1, yref: 'paper', text: '🌙 Noche', showarrow: false, font: { size: 9, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' },
+          { x: '12:00', y: 1, yref: 'paper', text: '☀️ Día',   showarrow: false, font: { size: 9, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' },
+          { x: '22:00', y: 1, yref: 'paper', text: '🌇 Tarde', showarrow: false, font: { size: 9, color: '#94a3b8' }, xanchor: 'center', yanchor: 'bottom' }
+        ],
+        xaxis: {
+          title: 'Hora del día',
+          categoryorder: 'array',
+          categoryarray: ALL_HOURS,
+          tickangle: 25,
+          tickfont: { size: 9 },
+          gridcolor: '#f1f5f9',
+          showline: true,
+          linecolor: '#e2e8f0'
+        },
+        yaxis: {
+          title: 'Nivel de Ruido, dBA',
+          range: [40, 85],
+          gridcolor: '#e2e8f0',
+          tickfont: { size: 9 },
+          zeroline: false
+        },
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor:  'rgba(0,0,0,0)',
+        hovermode: 'x unified',
+        legend: {
+          orientation: 'h',
+          y: -0.4
+        }
+      };
+    }
+
+    /* ─── Tiempo Real: carga y muestra datos ───────────────────── */
+    async function loadAndDisplayRealtimeData(stationName) {
+      // Show loading state
+      document.getElementById('tab-tiempo-real').innerHTML =
+        '<div class="flex items-center justify-center h-[200px] text-sm text-gray-400">Cargando datos en tiempo real...</div>';
+
+      // Find the n_serie for the selected station from annual data (most recent year)
+      const stationRows = annualData.filter(d => d.Estacion === stationName);
+      if (!stationRows.length) {
+        document.getElementById('tab-tiempo-real').innerHTML =
+          '<div class="flex items-center justify-center h-[200px] text-sm text-gray-400">No se encontraron datos para la estación</div>';
+        return;
+      }
+
+      // Get the most recent year's data to find n_serie
+      const sortedByYear = stationRows.sort((a, b) => {
+        const yearA = parseInt(a.Anio) || 0;
+        const yearB = parseInt(b.Anio) || 0;
+        return yearB - yearA; // Descending order (most recent first)
+      });
+
+      const n_serie = sortedByYear[0]?.n_serie;
+      if (!n_serie) {
+        document.getElementById('tab-tiempo-real').innerHTML =
+          '<div class="flex items-center justify-center h-[200px] text-sm text-gray-400">No se encontró n_serie para la estación</div>';
+        return;
+      }
+
+      const url = `${REALTIME_URL_PREFIX}${n_serie}${REALTIME_URL_SUFFIX}`;
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`No se pudieron cargar los datos en tiempo real para n_serie ${n_serie}`);
+        }
+        const csvText = await response.text();
+        const data = parseCSV(csvText);
+
+        if (!data.length) {
+          document.getElementById('tab-tiempo-real').innerHTML =
+            '<div class="flex items-center justify-center h-[200px] text-sm text-gray-400">No hay datos disponibles en tiempo real</div>';
+          return;
+        }
+
+        // Parse datetime and noise level
+        const timestamps = data.map(row => new Date(row.Datetime));
+        const noiseLevels = data.map(row => parseFloat(row.Laeq));
+
+        // Create the chart container
+        document.getElementById('tab-tiempo-real').innerHTML =
+          '<div id="realtime-chart" style="width:100%; height:350px;"></div>';
+
+        // Create the chart
+        const trace = {
+          x: timestamps,
+          y: noiseLevels,
+          type: 'scatter',
+          mode: 'lines',
+          line: { color: '#e84080', width: 2 },
+          hovertemplate: '<b>%{x}</b><br>Ruido: %{y:.2f} dBA<extra></extra>'
+        };
+
+        const layout = {
+          title: {
+            text: `Datos en Tiempo Real - ${stationName}<br>n_serie: ${n_serie}`,
+            font: {
+              size: 14,
+              weight: 200
+            },
+            x: 0.5
+          },
+          margin: { t: 50, r: 20, l: 55, b: 50 },
+          autosize: true,
+          xaxis: {
+            title: {
+              text: 'Fecha y Hora',
+              font: { size: 10 }
+            },
+            type: 'date',
+            tickfont: { size: 9 },
+            gridcolor: '#f1f5f9',
+            showline: true,
+            linecolor: '#e2e8f0'
+          },
+          yaxis: {
+            title: {
+              text: 'Nivel de Ruido, dBA',
+              font: { size: 10 }
+            },
+            range: [40, 85],
+            gridcolor: '#e8e8e4',
+            zeroline: false,
+            ticksuffix: '',
+            tickfont: { size: 9 }
+          },
+          paper_bgcolor: 'rgba(0,0,0,0)',
+          plot_bgcolor:  'rgba(0,0,0,0)',
+          showlegend: false
+        };
+
+        Plotly.newPlot('realtime-chart', [trace], layout, { responsive: true, displayModeBar: false });
+      } catch (error) {
+        console.error('Error loading realtime data:', error);
+        document.getElementById('tab-tiempo-real').innerHTML =
+          `<div class="flex items-center justify-center h-[200px] text-sm text-gray-400">Error al cargar datos en tiempo real: ${error.message}</div>`;
+      }
+    }
+
+    /* ─── Inicio ──────────────────────────────────────────────── */
+    loadData();
+  </script>
+
+</body>
+</html>
