@@ -87,6 +87,9 @@ function handleStationClick(stationId, btn) {
   // Show Tiempo Real tab when station is selected
   setTiempoRealTabVisibility(true);
 
+  // Switch to "Nivel de Ruido" tab
+  switchTab('ruido');
+
   // Notify callbacks
   if (onStationChangeCallback) {
     onStationChangeCallback(stationId);
@@ -95,12 +98,6 @@ function handleStationClick(stationId, btn) {
   // Render charts
   if (window.renderNoiseChart) window.renderNoiseChart();
   if (onRenderStationViewCallback) onRenderStationViewCallback(stationId);
-
-  // Update realtime tab if active
-      const activeTabBtn = document.querySelector('.text-white');
-  if (activeTabBtn && activeTabBtn.dataset.tab === 'tiempo-real' && onLoadRealtimeCallback) {
-    onLoadRealtimeCallback(stationId);
-  }
 }
 
 /**
