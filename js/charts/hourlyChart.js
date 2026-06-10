@@ -62,8 +62,10 @@ export function renderStationHourly(stationName) {
   });
 
   console.log('[HOURLY] Calling Plotly.newPlot with', traces.length, 'traces');
-  Plotly.newPlot(HOURLY_CONTAINER, traces, buildHourlyLayout(), { responsive: true, displayModeBar: false });
-  console.log('[HOURLY] Plotly.newPlot completed');
+  requestAnimationFrame(() => {
+    Plotly.newPlot(HOURLY_CONTAINER, traces, buildHourlyLayout(), { responsive: true, displayModeBar: false });
+    console.log('[HOURLY] Plotly.newPlot completed');
+  });
 }
 
 /**
@@ -122,6 +124,8 @@ export function renderRegionHourly(regionName) {
   });
 
   console.log('[HOURLY] Calling Plotly.newPlot with', traces.length, 'traces');
-  Plotly.newPlot(HOURLY_CONTAINER, traces, buildHourlyLayout(), { responsive: true, displayModeBar: false });
-  console.log('[HOURLY] Plotly.newPlot completed');
+  requestAnimationFrame(() => {
+    Plotly.newPlot(HOURLY_CONTAINER, traces, buildHourlyLayout(), { responsive: true, displayModeBar: false });
+    console.log('[HOURLY] Plotly.newPlot completed');
+  });
 }
