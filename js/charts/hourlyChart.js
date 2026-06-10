@@ -17,9 +17,14 @@ const HOURLY_CONTAINER = 'hourly-chart';
  * @param {string} stationName - Station name
  */
 export function renderStationHourly(stationName) {
+  console.log('[HOURLY] renderStationHourly called for:', stationName);
   const container = document.getElementById('tab-horario');
-  if (!container) return;
+  if (!container) {
+    console.error('[HOURLY] tab-horario container not found');
+    return;
+  }
 
+  console.log('[HOURLY] tab-horario container found, setting innerHTML');
   container.innerHTML = `
     <div class="flex flex-col gap-1.5">
       <h3 class="text-[15px] font-semibold text-gray-800">Perfil Horario: ${stationName}</h3>
@@ -29,9 +34,12 @@ export function renderStationHourly(stationName) {
   `;
 
   const stationHourlyData = state.getHourlyDataForStation(stationName);
+  console.log('[HOURLY] stationHourlyData rows:', stationHourlyData.length);
   const years = [...new Set(stationHourlyData.map(d => d.Anio))].sort();
+  console.log('[HOURLY] years found:', years);
 
   if (!years.length) {
+    console.log('[HOURLY] No years found, showing placeholder');
     showPlaceholder(HOURLY_CONTAINER, 'No hay datos horarios para esta estación');
     return;
   }
@@ -43,6 +51,7 @@ export function renderStationHourly(stationName) {
       return found ? parseFloat(found.Ruido_dB) : null;
     });
     const color = getYearColor(idx);
+    console.log(`[HOURLY] Year ${year}: ${yValues.filter(v => v !== null).length}/24 hours with data`);
     return createScatterTrace(
       ALL_HOURS,
       yValues,
@@ -52,7 +61,9 @@ export function renderStationHourly(stationName) {
     );
   });
 
+  console.log('[HOURLY] Calling Plotly.newPlot with', traces.length, 'traces');
   Plotly.newPlot(HOURLY_CONTAINER, traces, buildHourlyLayout(), { responsive: true, displayModeBar: false });
+  console.log('[HOURLY] Plotly.newPlot completed');
 }
 
 /**
@@ -62,9 +73,14 @@ export function renderStationHourly(stationName) {
  * @param {string} regionName - Region name
  */
 export function renderRegionHourly(regionName) {
+  console.log('[HOURLY] renderRegionHourly called for:', regionName);
   const container = document.getElementById('tab-horario');
-  if (!container) return;
+  if (!container) {
+    console.error('[HOURLY] tab-horario container not found');
+    return;
+  }
 
+  console.log('[HOURLY] tab-horario container found, setting innerHTML');
   container.innerHTML = `
     <div class="flex flex-col gap-1.5">
       <h3 class="text-[15px] font-semibold text-gray-800">Perfil Horario: ${regionName}</h3>
@@ -75,14 +91,18 @@ export function renderRegionHourly(regionName) {
 
   const regionStations = state.getStationsForRegion(regionName);
   const years = state.getYearsForRegion(regionName);
+  console.log('[HOURLY] regionStations:', regionStations);
+  console.log('[HOURLY] years available:', years);
 
   if (!years.length) {
+    console.log('[HOURLY] No years found, showing placeholder');
     showPlaceholder(HOURLY_CONTAINER, 'No hay datos horarios para esta región');
     return;
   }
 
   // Use the most recent year
   const lastYear = years[years.length - 1];
+  console.log('[HOURLY] Using last year:', lastYear);
 
   const traces = regionStations.map((st, idx) => {
     const stationData = state.hourlyData.filter(d => d.Estacion === st && Number(d.Anio) === lastYear);
@@ -91,6 +111,7 @@ export function renderRegionHourly(regionName) {
       return found ? parseFloat(found.Ruido_dB) : null;
     });
     const color = getColor(idx);
+    console.log(`[HOURLY] Station ${st}: ${yValues.filter(v => v !== null).length}/24 hours with data`);
     return createScatterTrace(
       ALL_HOURS,
       yValues,
@@ -100,5 +121,7 @@ export function renderRegionHourly(regionName) {
     );
   });
 
+  console.log('[HOURLY] Calling Plotly.newPlot with', traces.length, 'traces');
   Plotly.newPlot(HOURLY_CONTAINER, traces, buildHourlyLayout(), { responsive: true, displayModeBar: false });
+  console.log('[HOURLY] Plotly.newPlot completed');
 }

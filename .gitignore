@@ -7,3 +7,6 @@
 .env*
 !.env.example
 Red-Ruido-MMA-Dashboard.code-workspace
+AGENTS.md
+CLAUDE.md
+USAGE.md

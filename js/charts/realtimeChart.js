@@ -23,8 +23,6 @@ export async function loadAndDisplayRealtimeData(stationName) {
     return;
   }
 
-  showTabPlaceholder('Cargando datos en tiempo real...');
-
   try {
     // Find n_serie for the station from annual data (most recent year)
     const nSerie = state.getStationSerie(stationName);

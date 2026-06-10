@@ -44,6 +44,8 @@ function setupTabListeners() {
  * @param {string} tabName - Tab name: 'ruido', 'horario', 'tiempo-real'
  */
 export function switchTab(tabName) {
+  console.log('[TABS] switchTab called:', tabName);
+
   // Update button states
   updateTabButtons(tabName);
 
@@ -53,27 +55,47 @@ export function switchTab(tabName) {
     c.classList.toggle('block', c.id.endsWith(tabName));
   });
 
+  // Verify tab visibility
+  const activeTab = document.getElementById(`tab-${tabName}`);
+  console.log('[TABS] Active tab element:', activeTab);
+  console.log('[TABS] Active tab classes:', activeTab?.classList.toString());
+
   // Handle tab-specific logic
   if (onTabChangeCallback) {
     onTabChangeCallback(tabName);
   }
 
-  if (tabName === 'horario') {
-    handleHorarioTab();
-  } else if (tabName === 'tiempo-real') {
-    handleTiempoRealTab();
-  }
+  // Defer tab-specific handlers to next frame to ensure container is visible
+  // This fixes Plotly rendering issues when tab was previously hidden
+  requestAnimationFrame(() => {
+    console.log('[TABS] requestAnimationFrame fired for:', tabName);
+    if (tabName === 'horario') {
+      console.log('[TABS] Calling handleHorarioTab');
+      handleHorarioTab();
+    } else if (tabName === 'tiempo-real') {
+      console.log('[TABS] Calling handleTiempoRealTab');
+      handleTiempoRealTab();
+    }
+  });
 }
 
 /**
  * Handle Horario tab activation
  */
 function handleHorarioTab() {
+  console.log('[TABS] handleHorarioTab called');
+  console.log('[TABS] state.activeStation:', state.activeStation);
+  console.log('[TABS] state.activeRegion:', state.activeRegion);
+  console.log('[TABS] onRenderHourlyCallback exists:', !!onRenderHourlyCallback);
+
   if (state.activeStation && onRenderHourlyCallback) {
+    console.log('[TABS] Rendering hourly for STATION:', state.activeStation);
     onRenderHourlyCallback(state.activeStation);
   } else if (state.activeRegion && onRenderHourlyCallback) {
+    console.log('[TABS] Rendering hourly for REGION:', state.activeRegion);
     onRenderHourlyCallback(state.activeRegion, true); // true = isRegion
   } else {
+    console.log('[TABS] No station/region selected, showing placeholder');
     showPlaceholderHorario();
   }
 }
@@ -82,10 +104,29 @@ function handleHorarioTab() {
  * Handle Tiempo Real tab activation
  */
 function handleTiempoRealTab() {
+  // Show loading message immediately when tab is clicked
+  showRealtimeLoadingPlaceholder('Cargando ...');
+
   // This will be handled by the realtime chart module via callback
   // Just need to ensure the container is ready
   if (window.loadAndDisplayRealtimeData) {
     loadAndDisplayRealtimeData(state.activeStation);
+  }
+}
+
+/**
+ * Show loading placeholder in realtime tab
+ *
+ * @param {string} message - Message to display
+ */
+function showRealtimeLoadingPlaceholder(message) {
+  const container = document.getElementById('tab-tiempo-real');
+  if (container) {
+    container.innerHTML = `
+      <div class="flex flex-col items-center justify-center h-[200px] text-sm text-gray-400 gap-2">
+        <div class="animate-spin rounded-full h-6 w-6 border-2 border-[#2c2c2a] border-t-transparent"></div>
+        <span>${message}</span>
+      </div>`;
   }
 }
 
