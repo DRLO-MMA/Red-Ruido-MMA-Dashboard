@@ -40,7 +40,7 @@ export async function loadAndDisplayRealtimeData(stationName) {
     }
 
     const csvText = await response.text();
-    const data = parseCSV(csvText);
+    const data = parseCSV('Datetime,Laeq\n' + csvText);
 
     if (!data.length) {
       showTabPlaceholder('No hay datos disponibles en tiempo real');

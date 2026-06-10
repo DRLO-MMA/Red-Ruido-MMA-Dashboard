@@ -6,7 +6,7 @@
 // Data source URLs
 export const ANNUAL_URL = 'DATA/datos_anuales.csv';
 export const HOURLY_URL = 'DATA/perfiles_horarios.csv';
-export const REALTIME_URL_PREFIX = 'DATA/realtime_';
+export const REALTIME_URL_PREFIX = 'DATA/realtime/';
 export const REALTIME_URL_SUFFIX = '.csv';
 
 // Color palettes for charts

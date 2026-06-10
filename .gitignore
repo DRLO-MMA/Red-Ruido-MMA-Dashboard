@@ -1,12 +1,12 @@
 /HIDE
-
 # wrangler files
 .wrangler
 .dev.vars*
 !.dev.vars.example
 .env*
 !.env.example
-Red-Ruido-MMA-Dashboard.code-workspace
+*.code-workspace
 AGENTS.md
 CLAUDE.md
 USAGE.md
+NOTAS.md
