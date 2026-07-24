@@ -6,8 +6,8 @@
 // Data source URLs
 export const ANNUAL_URL = 'DATA/datos_anuales.csv';
 export const HOURLY_URL = 'DATA/perfiles_horarios.csv';
-export const REALTIME_URL_PREFIX = 'DATA/realtime/';
-export const REALTIME_URL_SUFFIX = '.csv';
+export const REALTIME_URL_PREFIX = 'https://dataruido-realtime.ppriede.workers.dev/';
+export const REALTIME_URL_SUFFIX = '';
 
 // Color palettes for charts
 export const COLORS = [
