@@ -6,7 +6,7 @@
 // Data source URLs
 export const ANNUAL_URL = 'DATA/datos_anuales.csv';
 export const HOURLY_URL = 'DATA/perfiles_horarios.csv';
-export const REALTIME_URL_PREFIX = 'https://dataruido.mma.gob.cl/realtime?s=';
+export const REALTIME_URL_PREFIX = '/api/realtime/';
 export const REALTIME_URL_SUFFIX = '';
 
 // Color palettes for charts
