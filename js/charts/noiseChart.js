@@ -6,6 +6,7 @@
 import { state } from '../state.js';
 import { buildNoiseChartLayout, createBarTrace, getColor } from './layouts.js';
 import { showPlaceholder } from '../utils/dom.js';
+import { getStationInfo } from '../data/stationInfo.js';
 
 /**
  * Render the annual noise level chart
@@ -37,6 +38,7 @@ function renderStationNoiseChart(containerId) {
 
   if (!years.length) {
     showPlaceholder(containerId, 'No hay datos anuales para esta estación', 'flex items-center justify-center h-[350px] text-sm text-gray-400');
+    document.getElementById('station-info')?.classList.add('hidden');
     return;
   }
 
@@ -55,6 +57,8 @@ function renderStationNoiseChart(containerId) {
   const layout = buildNoiseChartLayout(`Nivel de ruido anual<br>${stationName}`, true);
 
   Plotly.newPlot(containerId, [trace], layout, { responsive: true, displayModeBar: false });
+
+  displayStationInfo(stationName);
 }
 
 /**
@@ -63,6 +67,8 @@ function renderStationNoiseChart(containerId) {
  * @param {string} containerId - Chart container element ID
  */
 function renderRegionalNoiseChart(containerId) {
+  document.getElementById('station-info')?.classList.add('hidden');
+
   const visible = state.stationMeta.filter(s => state.activeStations.has(s.id));
 
   if (!visible.length) {
@@ -80,4 +86,50 @@ function renderRegionalNoiseChart(containerId) {
   const layout = buildNoiseChartLayout(`${state.activeRegion || 'Todas las regiones'}`, false);
 
   Plotly.newPlot(containerId, [trace], layout, { responsive: true, displayModeBar: false });
+}
+
+/**
+ * Display station info (description + optional image) below the chart
+ *
+ * @param {string} stationName - Station name
+ */
+async function displayStationInfo(stationName) {
+  const container = document.getElementById('station-info');
+  if (!container) return;
+
+  try {
+    const info = await getStationInfo(stationName);
+
+    if (!info) {
+      container.classList.add('hidden');
+      return;
+    }
+
+    const hasDesc = info.Descripcion && info.Descripcion.trim();
+    const hasImage = info.Imagen && info.Imagen.trim();
+
+    if (!hasDesc && !hasImage) {
+      container.classList.add('hidden');
+      return;
+    }
+
+    if (!hasDesc && hasImage) {
+      container.innerHTML = `
+        <div class="flex justify-center p-3 bg-white rounded-lg">
+          <img src="${info.Imagen}" alt="${stationName}" class="max-w-full h-auto rounded" style="max-height:300px; object-fit:contain" onerror="this.outerHTML='<div class=\\'flex items-center justify-center bg-gray-100 text-gray-400 text-xs rounded h-32 w-full\\'>Sin imagen</div>'">
+        </div>`;
+    } else {
+      container.innerHTML = `
+        <div class="flex flex-col md:flex-row gap-4 p-3 bg-white rounded-lg">
+          <div class="flex-1 text-sm text-gray-700 leading-relaxed">${info.Descripcion}</div>
+          ${hasImage
+            ? `<div class="w-full md:w-48 flex-shrink-0"><img src="${info.Imagen}" alt="${stationName}" class="w-full h-auto rounded" style="max-height:300px; object-fit:contain" onerror="this.parentElement.innerHTML='<div class=\\'w-full h-32 flex items-center justify-center bg-gray-100 text-gray-400 text-xs rounded\\'>Sin imagen</div>'"></div>`
+            : `<div class="w-full md:w-48 flex-shrink-0 flex items-center justify-center bg-gray-100 text-gray-400 text-xs rounded h-32">Sin imagen</div>`
+          }
+        </div>`;
+    }
+    container.classList.remove('hidden');
+  } catch {
+    container.classList.add('hidden');
+  }
 }

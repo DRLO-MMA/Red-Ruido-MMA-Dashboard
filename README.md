@@ -2,6 +2,6 @@
 Despliegue de informacion de la Red de Ruido del MMA
 
 ```bash
-python -m http.server 8000
+python -m http.server 5757
 ```
 

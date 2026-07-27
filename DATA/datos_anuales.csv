@@ -1,24 +1,43 @@
 Region;Estacion;Anio;Ruido_dB;n_serie
+Gran Santiago;Alameda;2020;74.2;00623
+Gran Santiago;Alameda;2021;73.9;00623
+Gran Santiago;Alameda;2022;75.2;00623
 Gran Santiago;Alameda;2023;75.1;00623
 Gran Santiago;Alameda;2024;74.8;00623
 Gran Santiago;Alameda;2025;74.8;00623
 Gran Santiago;Alameda;2026;74.1;00623
+Gran Santiago;San Miguel;2020;68.2;00625
+Gran Santiago;San Miguel;2021;68.5;00625
+Gran Santiago;San Miguel;2022;68.8;00625
 Gran Santiago;San Miguel;2023;67.7;00625
 Gran Santiago;San Miguel;2024;67;00625
 Gran Santiago;San Miguel;2025;66.6;00625
 Gran Santiago;San Miguel;2026;66.1;00625
+Concepción;Concepción Barrio Norte;2020;61.6;00627
+Concepción;Concepción Barrio Norte;2021;62.5;00627
+Concepción;Concepción Barrio Norte;2022;62.7;00627
 Concepción;Concepción Barrio Norte;2023;63.8;00627
 Concepción;Concepción Barrio Norte;2024;62.6;00627
 Concepción;Concepción Barrio Norte;2025;62.1;00627
 Concepción;Concepción Barrio Norte;2026;60.2;00627
+Gran Santiago;Independencia;2020;57.8;00628
+Gran Santiago;Independencia;2021;58.9;00628
+Gran Santiago;Independencia;2022;57.8;00628
 Gran Santiago;Independencia;2023;57;00628
 Gran Santiago;Independencia;2024;55.5;00628
 Gran Santiago;Independencia;2025;56.8;00628
 Gran Santiago;Independencia;2026;55.1;00628
-Gran Santiago;Autopista Central;2023;79;00629
+Gran Santiago;Autopista Central;2020;77.0;00629
+Gran Santiago;Autopista Central;2021;77.7;00629
+Gran Santiago;Autopista Central;2022;78.9;00629
+Gran Santiago;Autopista Central;2023;79.0;00629
 Gran Santiago;Autopista Central;2024;78.9;00629
 Gran Santiago;Autopista Central;2025;78.8;00629
 Gran Santiago;Autopista Central;2026;78.9;00629
+Gran Santiago;Ñuñoa;2020;56.7;00853
+Gran Santiago;Ñuñoa;2021;56.8;00853
+Gran Santiago;Ñuñoa;2022;57.6;00853
+Gran Santiago;Ñuñoa;2023;56.6;00853
 Gran Santiago;Ñuñoa;2023;56.7;00853
 Gran Santiago;Ñuñoa;2024;56.4;00853
 Gran Santiago;Ñuñoa;2025;56.1;00853
@@ -35,30 +54,52 @@ Concepción;CIAM Concepción;2023;68.5;01344
 Concepción;CIAM Concepción;2024;68.2;01344
 Concepción;CIAM Concepción;2025;69.9;01344
 Concepción;CIAM Concepción;2026;68.1;01344
+Gran Santiago;Las Condes;2020;67.9;01006
+Gran Santiago;Las Condes;2021;68.2;01006
+Gran Santiago;Las Condes;2022;69.2;01006
+Gran Santiago;Las Condes;2023;68.8;01006
 Gran Santiago;Las Condes;2023;68.8;01006
 Gran Santiago;Las Condes;2024;68.3;01006
 Gran Santiago;Las Condes;2025;68.1;01006
 Gran Santiago;Las Condes;2026;67.3;01006
+Valparaíso / Viña del Mar;Valparaíso;2020;68.1;01007
+Valparaíso / Viña del Mar;Valparaíso;2021;67.5;01007
+Valparaíso / Viña del Mar;Valparaíso;2022;68.4;01007
 Valparaíso / Viña del Mar;Valparaíso;2023;68.1;01007
 Valparaíso / Viña del Mar;Valparaíso;2024;68;01007
 Valparaíso / Viña del Mar;Valparaíso;2025;68.1;01007
 Valparaíso / Viña del Mar;Valparaíso;2026;67.3;01007
+Valparaíso / Viña del Mar;Viña del Mar;2020;69.4;01008
+Valparaíso / Viña del Mar;Viña del Mar;2021;69.7;01008
+Valparaíso / Viña del Mar;Viña del Mar;2022;70.6;01008
 Valparaíso / Viña del Mar;Viña del Mar;2023;70;01008
 Valparaíso / Viña del Mar;Viña del Mar;2024;69.9;01008
 Valparaíso / Viña del Mar;Viña del Mar;2025;70.1;01008
 Valparaíso / Viña del Mar;Viña del Mar;2026;70.2;01008
+Gran Santiago;La Florida;2020;67.2;01009
+Gran Santiago;La Florida;2021;67.6;01009
+Gran Santiago;La Florida;2022;68.7;01009
 Gran Santiago;La Florida;2023;68.4;01009
 Gran Santiago;La Florida;2024;68;01009
 Gran Santiago;La Florida;2025;67.9;01009
 Gran Santiago;La Florida;2026;67.2;01009
+Gran Santiago;Providencia;2020;64.2;01011
+Gran Santiago;Providencia;2021;64.4;01011
+Gran Santiago;Providencia;2022;65.0;01011
 Gran Santiago;Providencia;2023;64.6;01011
 Gran Santiago;Providencia;2024;64.4;01011
 Gran Santiago;Providencia;2025;63.8;01011
 Gran Santiago;Providencia;2026;63.3;01011
+Gran Santiago;Cerro Navia;2020;61.4;01013
+Gran Santiago;Cerro Navia;2021;59.0;01013
+Gran Santiago;Cerro Navia;2022;60.9;01013
 Gran Santiago;Cerro Navia;2023;59.2;01013
 Gran Santiago;Cerro Navia;2024;58.5;01013
 Gran Santiago;Cerro Navia;2025;58.7;01013
 Gran Santiago;Cerro Navia;2026;58.7;01013
+Gran Santiago;El Bosque;2020;66.3;01120
+Gran Santiago;El Bosque;2021;66.3;01120
+Gran Santiago;El Bosque;2022;66.3;01120
 Gran Santiago;El Bosque;2023;65.6;01120
 Gran Santiago;El Bosque;2024;66.2;01120
 Gran Santiago;El Bosque;2025;66.3;01120
